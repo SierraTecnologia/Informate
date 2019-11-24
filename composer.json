@@ -1,0 +1,36 @@
+{
+    "name": "sierratecnologia/informate",
+    "description": "informate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Rebello Sierra",
+            "email": "contato@ricardosierra.com.br"
+        }
+    ],
+    "require": {
+        "php": "^7.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Informate\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [],
+        "post-update-cmd": [],
+        "post-create-project-cmd": []
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Informate\\InformateProvider"
+            ],
+            "dont-discover": [
+                
+            ]
+        }
+    }
+}
