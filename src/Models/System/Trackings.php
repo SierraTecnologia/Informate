@@ -10,7 +10,7 @@ class Trackings extends ArchiveTrait
 {
     use BusinessTrait;
     
-    public $table = 'trackings';
+    public $table = 'audits';
 
     public $primaryKey = 'id';
 

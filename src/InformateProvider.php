@@ -5,6 +5,7 @@ namespace Informate;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Collection;
 
 class InformateProvider extends ServiceProvider
 {
@@ -68,12 +69,11 @@ class InformateProvider extends ServiceProvider
         $this->commands([]);
     }
 
-    protected function setProviders()
+    private function setProviders()
     {
-        collection(self::$providers)->map(function ($provider) {
+        (new Collection(self::$providers))->map(function ($provider) {
             $this->app->register($provider);
-        })
-
+        });
     }
 
 }
