@@ -10,12 +10,7 @@ use Illuminate\Support\Collection;
 class InformateProvider extends ServiceProvider
 {
     public static $providers = [
-        // \Informate\Providers\InformateEventServiceProvider::class,
-        // \Informate\Providers\InformateServiceProvider::class,
-        // \Informate\Providers\InformateRouteProvider::class,
-
-        // \Audit\AuditProvider::class,
-        // \Casa\CasaProvider::class,
+        
     ];
 
     /**
