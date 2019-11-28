@@ -140,7 +140,7 @@ class CreateFeaturesFATables extends Migration
 			$table->string('password')->nullable();
 			$table->integer('status')->nullable();
 			$table->integer('integration_id');
-			$table->unique('username', 'integration_id');
+			$table->unique(['username', 'integration_id']);
 			$table->timestamps();
             $table->softDeletes();
 		});

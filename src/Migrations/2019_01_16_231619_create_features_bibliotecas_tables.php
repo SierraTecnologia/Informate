@@ -1,6 +1,6 @@
 <?php
 
-use Boravel\Models\Identity\BibliotecaType;
+use Informate\Models\Entytys\Category\BibliotecaType;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
