@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGameOthers extends Migration
+class CreateFisicoVeiculosTables extends Migration
 {
     /**
      * Run the migrations.
@@ -14,6 +14,19 @@ class CreateGameOthers extends Migration
     public function up()
     {
         
+
+		/**
+		 * Veiculo Type
+		 */
+		Schema::create('vehicle_type', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
+			$table->increments('id')->unsigned();
+			$table->string('name', 255)->nullable();
+			$table->timestamps();
+            $table->softDeletes();
+    });
+    
+    
 		Schema::create('integrations', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
