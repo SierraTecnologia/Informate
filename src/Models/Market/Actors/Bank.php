@@ -15,9 +15,9 @@ class Bank extends Model
      */
     protected $fillable = [
         'description',
-        'bank',
+        'name',
         'code',
-        // 'bank',
+        // 'name',
         // 'agencia',
         // 'conta',
     ];
@@ -27,15 +27,11 @@ class Bank extends Model
             'type' => 'string',
             "analyzer" => "standard",
         ],
-        'bank' => [
+        'name' => [
             'type' => 'string',
             "analyzer" => "standard",
         ],
         'code' => [
-            'type' => 'string',
-            "analyzer" => "standard",
-        ],
-        'bank' => [
             'type' => 'string',
             "analyzer" => "standard",
         ],

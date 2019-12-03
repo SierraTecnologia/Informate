@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
+
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -18,6 +18,17 @@ class CreateBossHackerArsenalsTables extends Migration
             $table->string('name');
             $table->timestamps();
         });
+		Schema::create('weaponbles', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
+			$table->increments('id')->unsigned();
+			$table->integer('weaponble_id');
+			$table->string('weaponble_type', 255);
+
+            $table->unsignedInteger('weapon_id')->nullable();
+            // $table->foreign('weapon_id')->references('id')->on('weapons');
+			$table->timestamps();
+            $table->softDeletes();
+		});
 
     }
 

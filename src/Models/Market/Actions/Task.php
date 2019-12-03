@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Market\Actions;
 
-use App\Models\Model;
+use Informate\Models\Model;
 
 class Task extends Model
 {

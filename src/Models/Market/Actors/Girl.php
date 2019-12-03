@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Market\Actors;
 
-use App\Models\Model;
+use Informate\Models\Model;
 
 class Girl extends Model
 {

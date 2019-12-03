@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Features\Marketing;
 
-use App\Models\Model;
+use Informate\Models\Model;
 use Informate\Traits\ComplexRelationamentTrait;
 use Informate\Traits\BusinessTrait;
 

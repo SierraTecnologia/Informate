@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Identity\Fisicos;
 
-use App\Models\Model;
+use Informate\Models\Model;
 use Informate\Traits\ComplexRelationamentTrait;
 
 class Address extends Model

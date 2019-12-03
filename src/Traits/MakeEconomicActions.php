@@ -12,15 +12,15 @@ trait MakeEconomicActions
      */
     public function banks()
     {
-        return $this->morphToMany('Siravel\Models\Market\Actors\Bank', 'bankable');
+        return $this->morphToMany('Informate\Models\Market\Actors\Bank', 'bankable');
     }
     public function rendas()
     {
-        return $this->morphMany('Siravel\Models\Market\Abouts\Renda', 'rendable');
+        return $this->morphMany('Informate\Models\Market\Abouts\Renda', 'rendable');
     }
     public function gastos()
     {
-        return $this->morphMany('Siravel\Models\Market\Actions\Gasto', 'gastoable');
+        return $this->morphMany('Informate\Models\Market\Actions\Gasto', 'gastoable');
     }
 
     /**

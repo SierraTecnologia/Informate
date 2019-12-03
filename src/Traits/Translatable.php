@@ -2,7 +2,7 @@
 
 namespace Informate\Traits;
 
-use Siravel\Models\System\Translation;
+use Informate\Models\System\Translation;
 use Siravel\Services\CmsService;
 use RicardoSierra\Translation\GoogleTranslate;
 use App\Repositories\TranslationRepository;

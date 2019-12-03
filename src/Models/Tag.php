@@ -6,7 +6,7 @@ use SiObjects\Manipule\Builders\TagBuilder;
 use App\Contants\Tables;
 use SiObjects\Manipule\Entities\TagEntity;
 use Illuminate\Database\Eloquent\Collection;
-use App\Models\Model;
+use Informate\Models\Model;
 use Gamer\Support\Traits\Models\HasSlug;
 
 use App\Interfaces\Sortable;

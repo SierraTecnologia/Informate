@@ -47,7 +47,7 @@ trait AsHuman
      */
     public function videos()
     {
-        return $this->morphedByMany('Siravel\Models\Entytys\Digital\Midia\Video', 'personable');
+        return $this->morphedByMany('Informate\Models\Entytys\Digital\Midia\Video', 'personable');
     }
 
     /**
@@ -55,7 +55,7 @@ trait AsHuman
      */
     public function images()
     {
-        return $this->morphedByMany('Siravel\Models\Entytys\Digital\Midia\Image', 'personable');
+        return $this->morphedByMany('Informate\Models\Entytys\Digital\Midia\Image', 'personable');
     }
 
     /**
@@ -63,7 +63,15 @@ trait AsHuman
      */
     public function accounts()
     {
-        return $this->morphToMany('Siravel\Models\Identity\Digital\Account', 'accountable');
+        return $this->morphToMany('Informate\Models\Identity\Digital\Account', 'accountable');
+    }
+
+    /**
+     * Get all of the post's equipaments.
+     */
+    public function equipaments()
+    {
+        return $this->morphToMany('Informate\Models\Entytys\Fisicos\Equipament', 'equipamentable');
     }
 
     /**
@@ -71,7 +79,7 @@ trait AsHuman
      */
     public function workers()
     {
-        return $this->morphMany('Siravel\Models\Market\Actions\Worker', 'workerable');
+        return $this->morphMany('Informate\Models\Market\Actions\Worker', 'workerable');
     }
 
     /**
@@ -88,15 +96,15 @@ trait AsHuman
      */
     public function skills()
     {
-        return $this->morphToMany('Siravel\Models\Entytys\Fisicos\Skill', 'skillable');
+        return $this->morphToMany('Informate\Models\Entytys\Fisicos\Skill', 'skillable');
     }
     public function itens()
     {
-        return $this->morphToMany('Siravel\Models\Entytys\Fisicos\Item', 'itemable');
+        return $this->morphToMany('Informate\Models\Entytys\Fisicos\Item', 'itemable');
     }
     public function productions()
     {
-        return $this->morphToMany('Siravel\Models\Components\Productions\Production', 'productionable');
+        return $this->morphToMany('Informate\Models\Components\Productions\Production', 'productionable');
     }
     
     /**
@@ -106,15 +114,15 @@ trait AsHuman
      */
     public function pircings()
     {
-        return $this->morphMany('Siravel\Models\Identity\Fisicos\Pircing', 'pircingable');
+        return $this->morphMany('Informate\Models\Identity\Fisicos\Pircing', 'pircingable');
     }
     public function pintinhas()
     {
-        return $this->morphMany('Siravel\Models\Identity\Fisicos\Pintinha', 'pintinhable');
+        return $this->morphMany('Informate\Models\Identity\Fisicos\Pintinha', 'pintinhable');
     }
     public function tatuages()
     {
-        return $this->morphMany('Siravel\Models\Identity\Fisicos\Tatuage', 'tatuageable');
+        return $this->morphMany('Informate\Models\Identity\Fisicos\Tatuage', 'tatuageable');
     }
     
     /**

@@ -30,7 +30,7 @@ class CreateSkillsTable extends Migration
 		Schema::create('skillables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->string('valor', 255)->nullable();
-			$table->integer('skillable_id')->nullable();
+			$table->string('skillable_id')->nullable();
 			$table->string('skillable_type', 255)->nullable();
 			$table->string('skill_code');
             $table->foreign('skill_code')->references('code')->on('skills');

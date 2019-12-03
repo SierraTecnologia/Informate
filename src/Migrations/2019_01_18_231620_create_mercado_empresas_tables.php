@@ -29,7 +29,7 @@ class CreateMercadoEmpresasTables extends Migration
 			$table->increments('id')->unsigned();
 			$table->string('agencia', 255)->nullable();
 			$table->string('conta', 255)->nullable();
-			$table->unsignedInteger('bankable_id');
+			$table->string('bankable_id');
 			$table->string('bankable_type', 255);
 
             $table->unsignedInteger('bank_id')->nullable();
@@ -47,7 +47,8 @@ class CreateMercadoEmpresasTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('photos');
+		Schema::drop('bankables');
+		Schema::drop('banks');
 	}
 
 }
