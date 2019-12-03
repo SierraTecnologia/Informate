@@ -3,7 +3,7 @@
 namespace Informate\Models\Identity\Digital;
 
 use Informate\Models\Model;
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
+use Informate\Traits\ComplexRelationamentTrait;
 
 class Phone extends Model
 {

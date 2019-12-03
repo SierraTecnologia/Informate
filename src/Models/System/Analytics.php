@@ -2,9 +2,9 @@
 
 namespace Informate\Models\System;
 
-use SiObjects\Support\Traits\Models\ArchiveTrait;
+use Informate\Traits\ArchiveTrait;
 
-use SiObjects\Support\Traits\Models\BusinessTrait;
+use Informate\Traits\BusinessTrait;
 
 class Analytics extends ArchiveTrait
 {

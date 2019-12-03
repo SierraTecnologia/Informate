@@ -3,7 +3,7 @@
 namespace Informate\Models\Market\Informacao;
 
 use Informate\Models\Model;
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
+use Informate\Traits\ComplexRelationamentTrait;
 use Informate\Models\Entytys\Category\BibliotecaType;
 
 class Biblioteca extends Model

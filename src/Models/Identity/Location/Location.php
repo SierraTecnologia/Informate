@@ -5,9 +5,9 @@ namespace Informate\Models\Identity\Location;
 use SiObjects\Manipule\Builders\LocationBuilder;
 use Informate\Contants\Tables;
 use Informate\Features\Photos\Entities\LocationEntity;
-use SiObjects\ValueObjects\Coordinates;
-use SiObjects\ValueObjects\Latitude;
-use SiObjects\ValueObjects\Longitude;
+use Informate\ValueObjects\Coordinates;
+use Informate\ValueObjects\Latitude;
+use Informate\ValueObjects\Longitude;
 use Informate\Models\Model;
 use Illuminate\Support\Str;
 

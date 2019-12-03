@@ -3,7 +3,7 @@
 namespace Informate\Models\Market\Actions;
 
 use Informate\Models\Model;
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
+use Informate\Traits\ComplexRelationamentTrait;
 
 class Gasto extends Model
 {

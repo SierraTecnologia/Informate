@@ -3,8 +3,8 @@
 namespace Informate\Models\Features\Marketing;
 
 use App\Models\Model;
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
-use SiObjects\Support\Traits\Models\BusinessTrait;
+use Informate\Traits\ComplexRelationamentTrait;
+use Informate\Traits\BusinessTrait;
 
 class Feature extends Model
 {

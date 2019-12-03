@@ -12,7 +12,7 @@
 
 namespace Informate\Models\Entytys\Digital\Bot;
 
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
+use Informate\Traits\ComplexRelationamentTrait;
 use Informate\Models\Model;
 use Informate\Actions\Action;
 use Illuminate\Support\Facades\Log;

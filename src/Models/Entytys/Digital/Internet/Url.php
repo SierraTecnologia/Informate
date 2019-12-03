@@ -12,7 +12,7 @@
 
 namespace Informate\Models\Entytys\Digital\Internet;
 
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
+use Informate\Traits\ComplexRelationamentTrait;
 use Informate\Models\Model;
 
 class Url extends Model
