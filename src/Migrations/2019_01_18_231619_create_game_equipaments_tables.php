@@ -23,7 +23,7 @@ class CreateGameEquipamentsTables extends Migration
 		Schema::create('equipamentables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->integer('equipamentable_id');
+			$table->string('equipamentable_id');
 			$table->string('equipamentable_type', 255);
 
             $table->unsignedInteger('equipament_id')->nullable();
@@ -44,7 +44,7 @@ class CreateGameEquipamentsTables extends Migration
 		Schema::create('acessorioables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->integer('acessorioable_id');
+			$table->string('acessorioable_id');
 			$table->string('acessorioable_type', 255);
 
             $table->unsignedInteger('acessorio_id')->nullable();
@@ -61,9 +61,9 @@ class CreateGameEquipamentsTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('acessorios');
-		Schema::drop('equipaments');
-		Schema::drop('vehicle_types');
+		Schema::dropIfExists('acessorios');
+		Schema::dropIfExists('equipaments');
+		Schema::dropIfExists('vehicle_types');
 	}
 
 }

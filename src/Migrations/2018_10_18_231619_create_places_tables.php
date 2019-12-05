@@ -25,7 +25,7 @@ class CreatePlacesTables extends Migration
 		Schema::create('placeables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->integer('placeable_id');
+			$table->string('placeable_id');
 			$table->string('placeable_type', 255);
 
             $table->unsignedInteger('place_id')->nullable();
@@ -43,7 +43,8 @@ class CreatePlacesTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('places');
+		Schema::dropIfExists('placeables');
+		Schema::dropIfExists('places');
 	}
 
 }

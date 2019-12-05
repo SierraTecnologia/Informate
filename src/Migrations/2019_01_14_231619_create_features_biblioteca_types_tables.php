@@ -51,9 +51,9 @@ class CreateFeaturesBibliotecaTypesTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('acessorios');
-		Schema::drop('equipaments');
-		Schema::drop('vehicle_types');
+		Schema::dropIfExists('acessorios');
+		Schema::dropIfExists('equipaments');
+		Schema::dropIfExists('vehicle_types');
 	}
 
 }

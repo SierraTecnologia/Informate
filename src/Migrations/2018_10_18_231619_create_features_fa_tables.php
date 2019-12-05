@@ -276,7 +276,11 @@ class CreateFeaturesFATables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('identity_girls');
+
+
+
+		Schema::dropIfExists('identity_passwords');
+		Schema::dropIfExists('comments');
 	}
 
 }

@@ -24,7 +24,7 @@ class CreateTagsTable extends Migration
 		Schema::create('tagables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->integer('tagable_id')->nullable();
+			$table->string('tagable_id')->nullable();
 			$table->string('tagable_type', 255)->nullable();
 
             $table->integer('tag_id')->nullable();
@@ -42,8 +42,8 @@ class CreateTagsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('tagables');
-		Schema::drop('tags');
+		Schema::dropIfExists('tagables');
+		Schema::dropIfExists('tags');
 	}
 
 }

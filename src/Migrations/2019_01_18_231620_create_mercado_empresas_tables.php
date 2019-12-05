@@ -47,8 +47,8 @@ class CreateMercadoEmpresasTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('bankables');
-		Schema::drop('banks');
+		Schema::dropIfExists('bankables');
+		Schema::dropIfExists('banks');
 	}
 
 }

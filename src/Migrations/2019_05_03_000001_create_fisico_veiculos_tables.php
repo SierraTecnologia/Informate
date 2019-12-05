@@ -47,6 +47,6 @@ class CreateFisicoVeiculosTables extends Migration
      */
     public function down()
     {
-        
+      Schema::dropIfExists('vehicle_types');
     }
 }

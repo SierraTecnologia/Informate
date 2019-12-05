@@ -21,7 +21,7 @@ class CreateBossHackerArsenalsTables extends Migration
 		Schema::create('weaponbles', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->integer('weaponble_id');
+			$table->string('weaponble_id');
 			$table->string('weaponble_type', 255);
 
             $table->unsignedInteger('weapon_id')->nullable();
@@ -39,6 +39,7 @@ class CreateBossHackerArsenalsTables extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('weaponbles');
         Schema::dropIfExists('weapons');
     }
 }

@@ -98,7 +98,12 @@ class CreateSexAboutTables extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('identity_slaves');
+		Schema::dropIfExists('relationables');
+		Schema::dropIfExists('relations');
+		Schema::dropIfExists('positions');
+		Schema::dropIfExists('relation_types');
+		Schema::dropIfExists('genders');
+		Schema::dropIfExists('positions');
 	}
 
 }
