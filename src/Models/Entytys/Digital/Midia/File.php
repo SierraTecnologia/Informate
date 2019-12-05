@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Entytys\Digital\Midia;
 
-use SiObjects\Support\Traits\Models\ArchiveTrait;
+use Informate\Traits\ArchiveTrait;
 
 class File extends ArchiveTrait
 {

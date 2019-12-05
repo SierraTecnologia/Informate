@@ -7,7 +7,7 @@ use App\Models\User;
 use Informate\Models\Model;
 use Informate\Models\Identity\Actors\Business;
 use Informate\Models\System\Language;
-use SiObjects\Support\Traits\Models\EloquentGetTableNameTrait;
+use Informate\Traits\EloquentGetTableNameTrait;
 
 class Setting extends Model
 {

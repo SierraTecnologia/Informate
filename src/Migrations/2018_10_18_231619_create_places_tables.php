@@ -2,7 +2,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSlavePlaceAndEventsTables extends Migration
+class CreatePlacesTables extends Migration
 {
 
 	/**
@@ -34,22 +34,6 @@ class CreateSlavePlaceAndEventsTables extends Migration
             $table->softDeletes();
 		});
         
-
-        Schema::create(config('app.db-prefix', '').'events', function (Blueprint $table) {
-            $table->increments('id');
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->string('title');
-            $table->text('details');
-            $table->string('seo_description')->nullable();
-            $table->string('seo_keywords')->nullable();
-            $table->boolean('is_published')->default(0);
-            $table->string('template')->default('show');
-            $table->dateTime('published_at')->nullable();
-            $table->text('blocks')->nullable();
-            $table->nullableTimestamps();
-            $table->softDeletes();
-        });
 	}
 
 	/**

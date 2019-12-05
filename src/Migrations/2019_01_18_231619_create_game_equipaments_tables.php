@@ -20,6 +20,19 @@ class CreateGameEquipamentsTables extends Migration
 			$table->timestamps();
             $table->softDeletes();
 		});
+		Schema::create('equipamentables', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
+			$table->increments('id')->unsigned();
+			$table->integer('equipamentable_id');
+			$table->string('equipamentable_type', 255);
+
+            $table->unsignedInteger('equipament_id')->nullable();
+            // $table->foreign('equipament_id')->references('id')->on('equipaments');
+			$table->timestamps();
+            $table->softDeletes();
+		});
+
+
 		Schema::create('acessorios', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
@@ -28,11 +41,14 @@ class CreateGameEquipamentsTables extends Migration
 			$table->timestamps();
             $table->softDeletes();
 		});
-		Schema::create('vehicle_types', function (Blueprint $table) {
+		Schema::create('acessorioables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->string('name', 255)->nullable();
-			$table->text('description')->nullable();
+			$table->integer('acessorioable_id');
+			$table->string('acessorioable_type', 255);
+
+            $table->unsignedInteger('acessorio_id')->nullable();
+            // $table->foreign('acessorio_id')->references('id')->on('acessorios');
 			$table->timestamps();
             $table->softDeletes();
 		});

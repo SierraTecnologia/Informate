@@ -6,7 +6,7 @@
 namespace Gamer\Models;
 
 use App\Models\User;
-use App\Models\Model;
+use Informate\Models\Model;
 
 class Taste extends Model
 {

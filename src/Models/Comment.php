@@ -6,7 +6,7 @@ use SiObjects\Manipule\Builders\CommentBuilder;
 use App\Contants\Tables;
 use App\Features\Photos\Entities\CommentEntity;
 use Illuminate\Database\Eloquent\Collection;
-use App\Models\Model;
+use Informate\Models\Model;
 
 /**
  * Class Comment.

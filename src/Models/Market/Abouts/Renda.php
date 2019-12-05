@@ -3,7 +3,7 @@
 namespace Informate\Models\Market\Abouts;
 
 use Informate\Models\Model;
-use SiObjects\Support\Traits\Models\ComplexRelationamentTrait;
+use Informate\Traits\ComplexRelationamentTrait;
 
 class Renda extends Model
 {
