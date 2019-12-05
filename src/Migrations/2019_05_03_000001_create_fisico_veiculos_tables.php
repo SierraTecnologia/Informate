@@ -18,7 +18,7 @@ class CreateFisicoVeiculosTables extends Migration
       /**
       * Veiculo Type
       */
-      Schema::create('vehicle_type', function (Blueprint $table) {
+      Schema::create('vehicle_types', function (Blueprint $table) {
         $table->engine = 'InnoDB';
         $table->increments('id')->unsigned();
         $table->string('name', 255)->nullable();
