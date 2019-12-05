@@ -2,7 +2,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFeaturesFATables extends Migration
+class CreateInformateSocialPessoasTables extends Migration
 {
 
 	/**
@@ -17,7 +17,7 @@ class CreateFeaturesFATables extends Migration
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
 			$table->string('url', 255);
-			$table->integer('sitioable_id')->nullable();
+			$table->string('sitioable_id')->nullable();
 			$table->string('sitioable_type', 255)->nullable();
 			$table->timestamps();
             $table->softDeletes();
@@ -25,7 +25,7 @@ class CreateFeaturesFATables extends Migration
 		Schema::create(config('app.db-prefix', '').'sitioables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->integer('sitio_id');
-			$table->integer('sitioable_id');
+			$table->string('sitioable_id');
 			$table->string('sitioable_type', 255);
 			$table->timestamps();
             $table->softDeletes();

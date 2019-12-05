@@ -3,7 +3,7 @@
  * Gostos e Feitiches em Gerais
  */
 
-namespace Gamer\Models;
+namespace Informate\Models;
 
 use App\Models\User;
 use Informate\Models\Model;
