@@ -2,7 +2,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInformateSocialPessoasTables extends Migration
+class CreateInformateSocialPersonalidadesTables extends Migration
 {
 
 	/**
