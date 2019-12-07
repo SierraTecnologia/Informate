@@ -22,7 +22,7 @@ trait AsFofocavel
      */
     public function gostos()
     {
-        return $this->morphToMany('Informate\Models\Entytys\Fisicos\Gosto', 'gostoable');
+        return $this->morphToMany('Informate\Models\Entytys\About\Gosto', 'gostoable');
     }
     public function sitios()
     {
