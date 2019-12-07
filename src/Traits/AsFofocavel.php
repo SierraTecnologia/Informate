@@ -15,7 +15,7 @@ trait AsFofocavel
 
     public function infos()
     {
-        return $this->morphMany('Informate\Models\Market\Abouts\Info', 'infoable');
+        return $this->morphMany('Population\Models\Market\Abouts\Info', 'infoable');
     }
     /**
      * Many To Many (Polymorphic)
@@ -26,7 +26,7 @@ trait AsFofocavel
     }
     public function sitios()
     {
-        return $this->morphToMany('Informate\Models\Identity\Digital\Sitio', 'sitioable');
+        return $this->morphToMany('Population\Models\Identity\Digital\Sitio', 'sitioable');
     }
 
 

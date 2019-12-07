@@ -63,7 +63,7 @@ trait AsHuman
      */
     public function accounts()
     {
-        return $this->morphToMany('Informate\Models\Identity\Digital\Account', 'accountable');
+        return $this->morphToMany('Population\Models\Identity\Digital\Account', 'accountable');
     }
 
     /**
@@ -79,7 +79,7 @@ trait AsHuman
      */
     public function workers()
     {
-        return $this->morphMany('Informate\Models\Market\Actions\Worker', 'workerable');
+        return $this->morphMany('Population\Models\Market\Actions\Worker', 'workerable');
     }
 
     /**
@@ -114,15 +114,15 @@ trait AsHuman
      */
     public function pircings()
     {
-        return $this->morphMany('Informate\Models\Identity\Fisicos\Pircing', 'pircingable');
+        return $this->morphMany('Population\Models\Identity\Fisicos\Pircing', 'pircingable');
     }
     public function pintinhas()
     {
-        return $this->morphMany('Informate\Models\Identity\Fisicos\Pintinha', 'pintinhable');
+        return $this->morphMany('Population\Models\Identity\Fisicos\Pintinha', 'pintinhable');
     }
     public function tatuages()
     {
-        return $this->morphMany('Informate\Models\Identity\Fisicos\Tatuage', 'tatuageable');
+        return $this->morphMany('Population\Models\Identity\Fisicos\Tatuage', 'tatuageable');
     }
     
     /**
