@@ -31,7 +31,7 @@ class Acessorio extends Model
      */
     public function slaves()
     {
-        return $this->morphedByMany('Population\Models\Identity\Slave', 'skillable');
+        return $this->morphedByMany('Population\Models\Identity\Slave', 'acessorioable');
     }
 
     /**
@@ -39,6 +39,6 @@ class Acessorio extends Model
      */
     public function users()
     {
-        return $this->morphedByMany('App\Models\User', 'skillable');
+        return $this->morphedByMany('App\Models\User', 'acessorioable');
     }
 }

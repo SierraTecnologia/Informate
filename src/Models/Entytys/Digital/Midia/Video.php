@@ -37,15 +37,31 @@ class Video extends Model
 
     public function sitios()
     {
-        return $this->morphToMany('Population\Models\Identity\Digital\Sitio', 'sitioable');
+        return $this->morphToMany('Population\Models\Identity\Digital\Sitio', 'videoable');
+    }
+
+    /**
+     * Get all of the users that are assigned this tag.
+     */
+    public function users()
+    {
+        return $this->morphToMany('App\Models\User', 'videoable');
+    }
+
+    /**
+     * Get all of the persons that are assigned this tag.
+     */
+    public function persons()
+    {
+        return $this->morphToMany('Population\Models\Identity\Actors\Person', 'videoable');
     }
         
-    // /**
-    //  * Get all of the owning videoable models.
-    //  */
-    // @todo Verificar Depois
+    // // /**
+    // //  * Get all of the owning videoable models.
+    // //  */
+    // // @todo Verificar Depois
     // public function videoable()
     // {
-    //     // @todo Verificar depois //return $this->morphTo(); //, 'videoable_type', 'videoable_code'
+    //     return $this->morphTo(); //, 'videoable_type', 'videoable_code'
     // }
 }

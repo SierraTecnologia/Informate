@@ -53,7 +53,7 @@ class Equipament extends Model
      */
     public function slaves()
     {
-        return $this->morphedByMany('Population\Models\Identity\Slave', 'skillable');
+        return $this->morphedByMany('Population\Models\Identity\Slave', 'equipamentable');
     }
 
     /**
@@ -61,6 +61,6 @@ class Equipament extends Model
      */
     public function users()
     {
-        return $this->morphedByMany('App\Models\User', 'skillable');
+        return $this->morphedByMany('App\Models\User', 'equipamentable');
     }
 }
