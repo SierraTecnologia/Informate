@@ -1,4 +1,6 @@
-<?php namespace Informate\Models\Components\Book\Repos;
+<?php
+
+namespace Informate\Models\Components\Book\Repos;
 
 use Informate\Models\Components\Book\Book;
 use Informate\Models\Components\Book\Chapter;

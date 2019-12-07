@@ -1,4 +1,6 @@
-<?php namespace Informate\Models\Components\Book;
+<?php
+
+namespace Informate\Models\Components\Book;
 
 use Informate\Models\Permissions\PermissionService;
 use Illuminate\Database\Connection;

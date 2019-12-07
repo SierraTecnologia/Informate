@@ -37,7 +37,7 @@ class Video extends Model
 
     public function sitios()
     {
-        return $this->morphToMany('Population\Models\Identity\Digital\Sitio', 'videoable');
+        return $this->morphToMany('Population\Models\Identity\Digital\Sitio', 'sitioable');
     }
 
     /**
@@ -45,7 +45,7 @@ class Video extends Model
      */
     public function users()
     {
-        return $this->morphToMany('App\Models\User', 'videoable');
+        return $this->morphedByMany('App\Models\User', 'videoable');
     }
 
     /**
@@ -53,7 +53,7 @@ class Video extends Model
      */
     public function persons()
     {
-        return $this->morphToMany('Population\Models\Identity\Actors\Person', 'videoable');
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'videoable');
     }
         
     // // /**

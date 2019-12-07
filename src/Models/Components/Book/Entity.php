@@ -1,4 +1,6 @@
-<?php namespace Informate\Models\Components\Book;
+<?php
+
+namespace Informate\Models\Components\Book;
 
 use Informate\Actions\Book\Activity;
 use Informate\Actions\Book\Comment;

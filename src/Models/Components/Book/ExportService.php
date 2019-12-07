@@ -1,4 +1,6 @@
-<?php namespace Informate\Models\Components\Book;
+<?php
+
+namespace Informate\Models\Components\Book;
 
 use Informate\Models\Components\Book\Repos\EntityRepo;
 use SiObjects\Entitys\Uploads\ImageService;

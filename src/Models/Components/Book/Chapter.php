@@ -1,4 +1,6 @@
-<?php namespace Informate\Models\Components\Book;
+<?php
+
+namespace Informate\Models\Components\Book;
 
 class Chapter extends Entity
 {

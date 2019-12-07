@@ -1,4 +1,6 @@
-<?php namespace Informate\Models\Components\Book\Repos;
+<?php
+
+namespace Informate\Models\Components\Book\Repos;
 
 use Informate\Actions\Book\TagRepo;
 use Informate\Actions\Book\ViewService;
