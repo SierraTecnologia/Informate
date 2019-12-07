@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Log;
 use Intervention\Image\ImageManagerStatic as InterventionImage;
 use Storage;
 
-class Image extends ArchiveTrait
+class Imagen extends ArchiveTrait
 {
-    public $table = 'images';
+    public $table = 'imagens';
 
     public $primaryKey = 'id';
 
