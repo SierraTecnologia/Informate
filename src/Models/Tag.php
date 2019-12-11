@@ -7,12 +7,12 @@ use App\Contants\Tables;
 use SiObjects\Manipule\Entities\TagEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Informate\Models\Model;
-use Gamer\Support\Traits\Models\HasSlug;
+use Informate\Traits\HasSlug;
 
 use App\Interfaces\Sortable;
-use Gamer\Support\Traits\Models\Translatable;
+use Informate\TraitsTranslatable;
 use Illuminate\Database\Eloquent\Builder;
-use Gamer\Support\Traits\Models\SortableTrait;
+use Informate\TraitsSortableTrait;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
 
 /**

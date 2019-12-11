@@ -4,9 +4,9 @@ namespace Gamer\Models\Calendar;
 
 use App\Models\CmsModel as BaseModel;
 use App\Services\Normalizer;
-use Gamer\Support\Traits\Models\Translatable;
+use Informate\TraitsTranslatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Gamer\Support\Traits\Models\BusinessTrait;
+use Informate\TraitsBusinessTrait;
 
 class Event extends BaseModel
 {
