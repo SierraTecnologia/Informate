@@ -25,10 +25,7 @@ class Integration extends Model
      */
     protected $fillable = [
         'name',
-        'cpf',
-        'time_init',
-        'time_payed',
-        'role_id'
+        'url',
     ];
 
     protected $mappingProperties = array(

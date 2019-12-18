@@ -18,6 +18,7 @@ class CreateInformateSocialPessoasTables extends Migration
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
 			$table->string('name', 255)->nullable();
+			$table->string('text', 255)->nullable();
 			$table->string('description', 255)->nullable();
 			$table->integer('status')->nullable();
 			$table->integer('gosto_id')->nullable();
