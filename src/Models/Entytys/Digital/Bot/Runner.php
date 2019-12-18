@@ -14,8 +14,9 @@ namespace Informate\Models\Entytys\Digital\Bot;
 
 use Informate\Traits\ComplexRelationamentTrait;
 use Informate\Models\Model;
-use Informate\Actions\Action;
-use Illuminate\Support\Facades\Log;
+use SiInteractions\Actions\Action;
+use Log;
+
 class Runner extends Model
 {
     use ComplexRelationamentTrait;

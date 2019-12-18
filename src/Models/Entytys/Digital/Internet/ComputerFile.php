@@ -9,7 +9,7 @@ use Config;
 use FileService;
 use Exception;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Log;
+use Log;
 use Intervention\Image\ImageManagerStatic as InterventionImage;
 use Storage;
 

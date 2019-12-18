@@ -2,7 +2,7 @@
 
 namespace Informate\Traits;
 
-use Illuminate\Support\Facades\Log;
+use Log;
 
 trait AsFofocavel
 {
