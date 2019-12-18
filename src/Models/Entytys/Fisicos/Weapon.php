@@ -46,5 +46,21 @@ class Weapon extends Model
     {
         return $this->morphMany('App\Models\Comment', 'commentable');
     }
+    
+    /**
+     * Get all of the slaves that are assigned this tag.
+     */
+    public function persons()
+    {
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'equipamentable');
+    }
+
+    /**
+     * Get all of the users that are assigned this tag.
+     */
+    public function users()
+    {
+        return $this->morphedByMany('App\Models\User', 'equipamentable');
+    }
 
 }
