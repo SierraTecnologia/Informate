@@ -20,6 +20,9 @@ class Weapon extends Model
      */
     protected $fillable = [
         'name',
+        'url',
+        'description',
+        'obs',
     ];
 
 

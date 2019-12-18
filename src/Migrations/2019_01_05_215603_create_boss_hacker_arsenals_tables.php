@@ -16,6 +16,9 @@ class CreateBossHackerArsenalsTables extends Migration
         Schema::create('weapons', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('url')->nullable();
+            $table->string('description')->nullable();
+            $table->string('obs')->nullable();
             $table->timestamps();
         });
 		Schema::create('weaponables', function (Blueprint $table) {
