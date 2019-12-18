@@ -31,6 +31,32 @@ class Imagen extends ArchiveTrait
         'location' => 'mimes:jpeg,jpg,bmp,png,gif',
     ];
 
+    public function links()
+    {
+        return $this->sitios();
+    }
+
+    public function sitios()
+    {
+        return $this->morphToMany('Population\Models\Identity\Digital\Sitio', 'sitioable');
+    }
+
+    /**
+     * Get all of the users that are assigned this tag.
+     */
+    public function users()
+    {
+        return $this->morphedByMany('App\Models\User', 'imagenable');
+    }
+
+    /**
+     * Get all of the persons that are assigned this tag.
+     */
+    public function persons()
+    {
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'imagenable');
+    }
+
     /**
      * Get the images url location.
      *
