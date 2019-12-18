@@ -50,7 +50,7 @@ class CreateInfraTables extends Migration
             $table->string('url')->nullable();
             $table->integer('status')->default(1)->nullable();
             $table->integer('infra_ambiente_id')->nullable();
-            $table->integer('integration_service_id')->nullable();
+            $table->integer('integration_id')->nullable();
             $table->integer('infra_ssh_key_id')->nullable();
             $table->timestamps();
         });
@@ -69,7 +69,7 @@ class CreateInfraTables extends Migration
             $table->increments('id');
             $table->string('install_path')->nullable();
             $table->integer('status')->default(1)->nullable();
-            $table->integer('integration_service_id')->nullable();
+            $table->integer('integration_id')->nullable();
             $table->integer('infra_ambiente_id')->nullable();
             $table->integer('infra_computer_id')->nullable();
             $table->integer('code_project_id')->nullable();
