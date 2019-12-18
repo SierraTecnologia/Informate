@@ -87,12 +87,6 @@ class CreateInfraTables extends Migration
             $table->integer('status')->nullable();
             $table->timestamps();
         });
-        Schema::create('emails', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('slug')->nullable();
-            $table->integer('infra_domain_id')->nullable();
-            $table->timestamps();
-        });
 
         Schema::create('infra_subdomains', function (Blueprint $table) {
             $table->increments('id');

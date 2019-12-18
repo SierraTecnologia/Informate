@@ -29,9 +29,9 @@ class Acessorio extends Model
     /**
      * Get all of the slaves that are assigned this tag.
      */
-    public function slaves()
+    public function persons()
     {
-        return $this->morphedByMany('Population\Models\Identity\Slave', 'acessorioable');
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'acessorioable');
     }
 
     /**

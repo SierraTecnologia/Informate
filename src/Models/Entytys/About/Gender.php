@@ -1,4 +1,8 @@
 <?php
+/**
+ * @todo Fazer
+ * Procurar por todos ", 'skillable');" e consertar o problema de copy cola
+ */
 
 namespace Informate\Models\Entytys\About;
 
@@ -29,9 +33,9 @@ class Gender extends Model
     /**
      * Get all of the slaves that are assigned this tag.
      */
-    public function slaves()
+    public function persons()
     {
-        return $this->morphedByMany('Population\Models\Identity\Slave', 'skillable');
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'genderable');
     }
 
     /**
@@ -39,6 +43,6 @@ class Gender extends Model
      */
     public function users()
     {
-        return $this->morphedByMany('App\Models\User', 'skillable');
+        return $this->morphedByMany('App\Models\User', 'genderable');
     }
 }
