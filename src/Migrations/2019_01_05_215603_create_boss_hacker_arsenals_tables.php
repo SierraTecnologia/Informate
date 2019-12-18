@@ -18,11 +18,11 @@ class CreateBossHackerArsenalsTables extends Migration
             $table->string('name');
             $table->timestamps();
         });
-		Schema::create('weaponbles', function (Blueprint $table) {
+		Schema::create('weaponables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
-			$table->string('weaponble_id');
-			$table->string('weaponble_type', 255);
+			$table->string('weaponable_id');
+			$table->string('weaponable_type', 255);
 
             $table->unsignedInteger('weapon_id')->nullable();
             // $table->foreign('weapon_id')->references('id')->on('weapons');
@@ -39,7 +39,7 @@ class CreateBossHackerArsenalsTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weaponbles');
+        Schema::dropIfExists('weaponables');
         Schema::dropIfExists('weapons');
     }
 }
