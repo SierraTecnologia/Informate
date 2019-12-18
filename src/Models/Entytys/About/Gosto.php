@@ -14,7 +14,7 @@ class Gosto extends Model
      */
     protected $fillable = [
         'name',
-        'description',
+        'text',
         'gosto_id'
     ];
 
@@ -26,7 +26,7 @@ class Gosto extends Model
             'type' => 'string',
             "analyzer" => "standard",
         ],
-        'description' => [
+        'text' => [
             'type' => 'string',
             "analyzer" => "standard",
         ],

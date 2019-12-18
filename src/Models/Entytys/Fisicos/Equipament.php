@@ -14,9 +14,6 @@ class Equipament extends Model
      */
     protected $fillable = [
         'name',
-        'cpf',
-        'email',
-        'role_id'
     ];
 
     protected $mappingProperties = array(
@@ -24,25 +21,6 @@ class Equipament extends Model
          * User Info
          */
         'name' => [
-            'type' => 'string',
-            "analyzer" => "standard",
-        ],
-        'cpf' => [
-            'type' => 'string',
-            "analyzer" => "standard",
-        ],
-        'email' => [
-            'type' => 'string',
-            "analyzer" => "standard",
-        ],
-
-        /**
-         * Grupo de Usuário:
-         * 
-         * 3 -> Usuário de Produtora
-         * Default: 3
-         */
-        'role_id' => [
             'type' => 'string',
             "analyzer" => "standard",
         ],

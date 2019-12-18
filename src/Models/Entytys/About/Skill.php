@@ -28,6 +28,7 @@ class Skill extends Model
         'name',
         'description',
         'code',
+        'status',
         'skill_code'
     ];
 
