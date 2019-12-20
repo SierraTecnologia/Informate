@@ -3198,12 +3198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SierraTecnologia/laravel-support.git",
-                "reference": "501c87ae1460586e9157fad4244792621ce27328"
+                "reference": "2761154dd45871140e73bb12d6e6d82e65be6cfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/501c87ae1460586e9157fad4244792621ce27328",
-                "reference": "501c87ae1460586e9157fad4244792621ce27328",
+                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/2761154dd45871140e73bb12d6e6d82e65be6cfa",
+                "reference": "2761154dd45871140e73bb12d6e6d82e65be6cfa",
                 "shasum": ""
             },
             "require": {
@@ -3240,12 +3240,16 @@
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "utils/helpers.php"
-                ],
                 "psr-4": {
                     "Support\\": "src/"
-                }
+                },
+                "classmap": [
+                    "utils/classes"
+                ],
+                "files": [
+                    "utils/funcs/load-laravel.php",
+                    "utils/funcs/helpers.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3281,7 +3285,7 @@
                 "trait",
                 "validator"
             ],
-            "time": "2019-12-19T01:35:36+00:00"
+            "time": "2019-12-20T02:07:42+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
