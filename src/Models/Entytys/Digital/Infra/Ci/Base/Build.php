@@ -7,7 +7,7 @@ use SiUtils\Tools\Model;
 use SiUtils\Tools\Store\BuildStore;
 use SiUtils\Tools\Store\Factory;
 
-class Build extends Model
+class Build extends Base
 {
     const STATUS_PENDING = 0;
     const STATUS_RUNNING = 1;

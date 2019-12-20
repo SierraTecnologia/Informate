@@ -2,7 +2,7 @@
 
 namespace Informate\Models\System;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
 class Country extends \RicardoSierra\Translation\Models\Country
 {

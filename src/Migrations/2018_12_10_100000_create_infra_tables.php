@@ -18,7 +18,7 @@ class CreateInfraTables extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->default(1)->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
         Schema::create('infra_ambientes', function (Blueprint $table) {
@@ -26,7 +26,7 @@ class CreateInfraTables extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
             $table->string('branch')->nullable();
-            $table->integer('status')->default(1)->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
         
@@ -36,7 +36,7 @@ class CreateInfraTables extends Migration
             $table->string('slug')->nullable();
             $table->text('private_key')->nullable();
             $table->text('public_key')->nullable();
-            $table->integer('status')->default(1)->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
         Schema::create('infra_computers', function (Blueprint $table) {
@@ -48,7 +48,7 @@ class CreateInfraTables extends Migration
             $table->string('password')->nullable();
             $table->string('ssh_port')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->default(1)->nullable();
+            $table->integer('status')->default(1);
             $table->integer('infra_ambiente_id')->nullable();
             $table->integer('integration_id')->nullable();
             $table->integer('infra_ssh_key_id')->nullable();
@@ -68,7 +68,7 @@ class CreateInfraTables extends Migration
         Schema::create('infra_deploys', function (Blueprint $table) {
             $table->increments('id');
             $table->string('install_path')->nullable();
-            $table->integer('status')->default(1)->nullable();
+            $table->integer('status')->default(1);
             $table->integer('integration_id')->nullable();
             $table->integer('infra_ambiente_id')->nullable();
             $table->integer('infra_computer_id')->nullable();
@@ -84,7 +84,7 @@ class CreateInfraTables extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
 
@@ -92,7 +92,7 @@ class CreateInfraTables extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->nullable();
+            $table->integer('status')->default(1);
             $table->integer('infra_domain_id')->nullable();
             $table->timestamps();
         });
@@ -100,7 +100,7 @@ class CreateInfraTables extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->nullable();
+            $table->integer('status')->default(1);
             $table->integer('infra_domain_id')->nullable();
             $table->timestamps();
         });

@@ -12,7 +12,7 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
 use Symfony\Component\Security\Core\Role\Role as SecurityRole;
 
@@ -21,7 +21,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  *
  */
-class Role extends Model
+class Role extends Base
 {
     protected $id;
     protected $name;

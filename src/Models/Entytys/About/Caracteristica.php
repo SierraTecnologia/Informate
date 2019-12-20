@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\About;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Caracteristica extends Model
+class Caracteristica extends Base
 {
     public $incrementing = false;
     protected $casts = [

@@ -4,7 +4,7 @@ namespace Informate\Models\Entytys\Digital\Midia;
 
 use SiObjects\Manipule\Builders\ThumbnailBuilder;
 use Informate\Features\Photos\Entities\ThumbnailEntity;
-use Informate\Models\Model;
+use Support\Models\Base;
 
 /**
  * Class Thumbnail.
@@ -15,7 +15,7 @@ use Informate\Models\Model;
  * @property int height
  * @package App\Models
  */
-class Thumbnail extends Model
+class Thumbnail extends Base
 {
     /**
      * @inheritdoc

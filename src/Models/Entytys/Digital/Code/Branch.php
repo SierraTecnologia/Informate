@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Branch extends Model
+class Branch extends Base
 {
 
     protected $organizationPerspective = true;

@@ -12,9 +12,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Wiki extends Model
+class Wiki extends Base
 {
     public static $TYPE_ID = 2;
 

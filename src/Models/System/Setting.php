@@ -4,12 +4,12 @@ namespace Informate\Models\System;
 
 use App\Models\User;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use Population\Models\Identity\Actors\Business;
 use Informate\Models\System\Language;
 use Informate\Traits\EloquentGetTableNameTrait;
 
-class Setting extends Model
+class Setting extends Base
 {
     use EloquentGetTableNameTrait;
     

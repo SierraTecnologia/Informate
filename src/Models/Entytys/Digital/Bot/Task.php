@@ -14,9 +14,9 @@ namespace Informate\Models\Entytys\Digital\Bot;
 
 use Informate\Traits\ComplexRelationamentTrait;
 use Informate\Traits\TasksTrait;
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Task extends Model
+class Task extends Base
 {
     use ComplexRelationamentTrait, TasksTrait;
 

@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class ServiceAccount extends Model
+class ServiceAccount extends Base
 {
 
     protected $organizationPerspective = false;

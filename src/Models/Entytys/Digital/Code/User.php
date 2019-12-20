@@ -14,7 +14,7 @@ namespace Informate\Models\Entytys\Digital\Code;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
-use Informate\Models\Model;
+use Support\Models\Base;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -23,7 +23,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @author Alexandre Salomé <alexandre.salome@gmail.com
  * @author Julien DIDIER <julien@jdidier.net>
  */
-class User extends Model implements UserInterface
+class User extends Base implements UserInterface
 {
 
     protected $organizationPerspective = true;

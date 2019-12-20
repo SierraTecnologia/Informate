@@ -2,10 +2,10 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use Informate\Models\Entytys\Digital\Internet\Url;
 
-class Domain extends Model
+class Domain extends Base
 {
 
     public static $apresentationName = 'Dominios';

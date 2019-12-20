@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class CodeIssueLink extends Model
+class CodeIssueLink extends Base
 {
     protected $organizationPerspective = false;
 

@@ -2,11 +2,11 @@
 
 namespace Informate\Models\Entytys\Digital\Midia;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class PhotoAlbum extends Model
+class PhotoAlbum extends Base
 {
 
     use SoftDeletes;

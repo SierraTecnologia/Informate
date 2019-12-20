@@ -7,7 +7,7 @@ use Informate\Contants\Tables;
 use Carbon\Carbon;
 use Informate\Features\Photos\Entities\PhotoEntity;
 use Illuminate\Database\Eloquent\Collection;
-use Informate\Models\Model;
+use Support\Models\Base;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 /**
@@ -28,7 +28,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Collection posts
  * @package App\Models
  */
-class Photo extends Model
+class Photo extends Base
 {
     use SoftDeletes;
 

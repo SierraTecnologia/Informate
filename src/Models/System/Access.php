@@ -5,9 +5,9 @@
 
 namespace Informate\Models\System;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Access extends Model
+class Access extends Base
 {
     // use BusinessTrait;
 

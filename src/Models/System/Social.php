@@ -1,9 +1,9 @@
 <?php
 namespace Informate\Models\System;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Social extends Model {
+class Social extends Base {
 
     protected $table = 'social_logins';
 

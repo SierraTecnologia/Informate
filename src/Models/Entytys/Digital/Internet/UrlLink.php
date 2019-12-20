@@ -12,9 +12,9 @@
 
 namespace Informate\Models\Entytys\Digital\Internet;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class UrlLink extends Model
+class UrlLink extends Base
 {
     protected $organizationPerspective = true;
 

@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Language extends Model
+class Language extends Base
 {
     protected $organizationPerspective = false;
 

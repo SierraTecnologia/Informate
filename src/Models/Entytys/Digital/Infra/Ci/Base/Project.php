@@ -5,7 +5,7 @@ namespace Informate\Models\Entytys\Digital\Infra\Ci\Base;
 use SiUtils\Tools\Exception\InvalidArgumentException;
 use SiUtils\Tools\Model;
 
-class Project extends Model
+class Project extends Base
 {
     const TYPE_LOCAL            = 'local';
     const TYPE_GIT              = 'git';

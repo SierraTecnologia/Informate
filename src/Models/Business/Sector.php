@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Business;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Sector extends Model
+class Sector extends Base
 {
 
     protected $organizationPerspective = false;

@@ -13,9 +13,9 @@
 namespace Informate\Models\Entytys\Digital\Internet;
 
 use Informate\Traits\ComplexRelationamentTrait;
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Url extends Model
+class Url extends Base
 {
 
     protected $organizationPerspective = true;

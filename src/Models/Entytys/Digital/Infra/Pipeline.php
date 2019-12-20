@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Pipeline extends Model
+class Pipeline extends Base
 {
 
     protected $organizationPerspective = true;

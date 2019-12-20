@@ -18,7 +18,7 @@ class CreateSexAboutTables extends Migration
 			$table->increments('id')->unsigned();
 			$table->string('name', 255)->nullable();
 			$table->string('description', 255)->nullable();
-			$table->integer('status')->nullable();
+			$table->integer('status')->default(1);
 			$table->unsignedInteger('gender_id')->nullable();
 			$table->timestamps();
             $table->softDeletes();
@@ -29,7 +29,7 @@ class CreateSexAboutTables extends Migration
 			$table->increments('id')->unsigned();
 			$table->string('name', 255)->nullable();
 			$table->string('description', 255)->nullable();
-			$table->integer('status')->nullable();
+			$table->integer('status')->default(1);
 
 			$table->unsignedInteger('relation_type_id')->nullable();
 			$table->timestamps();
@@ -42,7 +42,7 @@ class CreateSexAboutTables extends Migration
             $table->primary('code');
 			$table->string('name', 255)->nullable();
 			$table->string('description', 255)->nullable();
-			$table->integer('status')->nullable();
+			$table->integer('status')->default(1);
 			$table->string('position_code')->nullable();
 			$table->timestamps();
             $table->softDeletes();
@@ -57,7 +57,7 @@ class CreateSexAboutTables extends Migration
 			$table->increments('id')->unsigned();
 			$table->string('name', 255)->nullable();
 			$table->string('description', 255)->nullable();
-			$table->integer('status')->nullable();
+			$table->integer('status')->default(1);
 			$table->string('bottom_code');
 			$table->string('top_code');
 			$table->string('name_relation_to')->nullable();

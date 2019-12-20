@@ -5,9 +5,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Container extends Model
+class Container extends Base
 {
 
     protected $organizationPerspective = true;

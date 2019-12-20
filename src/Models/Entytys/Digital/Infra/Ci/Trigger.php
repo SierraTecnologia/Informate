@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra\Ci;
     
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Trigger extends Model
+class Trigger extends Base
 {
 
     protected $organizationPerspective = true;

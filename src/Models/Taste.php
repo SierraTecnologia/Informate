@@ -6,9 +6,9 @@
 namespace Informate\Models;
 
 use App\Models\User;
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Taste extends Model
+class Taste extends Base
 {
     public $table = "tastes";
 

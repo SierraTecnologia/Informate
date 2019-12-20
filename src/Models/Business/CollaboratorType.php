@@ -7,9 +7,9 @@
  */
 namespace Informate\Models\Business;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class CollaboratorType extends Model
+class CollaboratorType extends Base
 {
 
     protected $organizationPerspective = false;

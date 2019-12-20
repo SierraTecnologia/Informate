@@ -2,10 +2,10 @@
 
 namespace Informate\Models\Entytys\Fisicos;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use Informate\Traits\AsFofocavel;
 
-class Weapon extends Model
+class Weapon extends Base
 {
     use AsFofocavel;
 

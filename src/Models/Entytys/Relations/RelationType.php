@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Relations;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class RelationType extends Model
+class RelationType extends Base
 {
 
     /**

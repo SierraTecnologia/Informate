@@ -6,7 +6,7 @@ use SiObjects\Manipule\Builders\TagBuilder;
 use App\Contants\Tables;
 use SiObjects\Manipule\Entities\TagEntity;
 use Illuminate\Database\Eloquent\Collection;
-use Informate\Models\Model;
+use Support\Models\Base;
 use Informate\Traits\HasSlug;
 
 use App\Interfaces\Sortable;
@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Collection as DbCollection;
  * @property Collection posts
  * @package App\Models
  */
-class Tag extends Model implements Sortable
+class Tag extends Base implements Sortable
 {
     use SortableTrait, Translatable, HasSlug;
 

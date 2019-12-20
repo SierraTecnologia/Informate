@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra\Ci;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Stage extends Model
+class Stage extends Base
 {
 
     protected $organizationPerspective = true;

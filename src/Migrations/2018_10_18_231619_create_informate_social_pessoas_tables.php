@@ -20,7 +20,7 @@ class CreateInformateSocialPessoasTables extends Migration
 			$table->string('name', 255)->nullable();
 			$table->string('text', 255)->nullable();
 			$table->string('description', 255)->nullable();
-			$table->integer('status')->nullable();
+			$table->integer('status')->default(1);
 			$table->integer('gosto_id')->nullable();
 			$table->timestamps();
             $table->softDeletes();

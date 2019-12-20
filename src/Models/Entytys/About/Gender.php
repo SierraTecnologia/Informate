@@ -6,9 +6,9 @@
 
 namespace Informate\Models\Entytys\About;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Gender extends Model
+class Gender extends Base
 {
 
     /**

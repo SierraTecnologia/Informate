@@ -2,10 +2,10 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use SiUtils\Tools\Ssh;
 
-class Logger extends Model
+class Logger extends Base
 {
 
     protected $organizationPerspective = true;

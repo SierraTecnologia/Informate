@@ -5,7 +5,7 @@ namespace Informate\Models\Entytys\Digital\Infra\Ci\Base;
 use SiUtils\Tools\Model;
 use SiUtils\Tools\Exception\InvalidArgumentException;
 
-class User extends Model
+class User extends Base
 {
     /**
      * @var array

@@ -6,7 +6,7 @@ use SiObjects\Manipule\Builders\CommentBuilder;
 use App\Contants\Tables;
 use App\Features\Photos\Entities\CommentEntity;
 use Illuminate\Database\Eloquent\Collection;
-use Informate\Models\Model;
+use Support\Models\Base;
 
 /**
  * Class Comment.
@@ -16,7 +16,7 @@ use Informate\Models\Model;
  * @property Collection posts
  * @package App\Models
  */
-class Comment extends Model
+class Comment extends Base
 {
     /**
      * @inheritdoc

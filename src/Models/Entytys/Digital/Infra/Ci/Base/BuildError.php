@@ -5,7 +5,7 @@ namespace Informate\Models\Entytys\Digital\Infra\Ci\Base;
 use SiUtils\Tools\Model;
 use SiUtils\Tools\Exception\InvalidArgumentException;
 
-class BuildError extends Model
+class BuildError extends Base
 {
     const SEVERITY_CRITICAL = 0;
     const SEVERITY_HIGH     = 1;

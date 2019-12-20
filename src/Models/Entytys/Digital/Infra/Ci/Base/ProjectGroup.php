@@ -5,7 +5,7 @@ namespace Informate\Models\Entytys\Digital\Infra\Ci\Base;
 use SiUtils\Tools\Model;
 use SiUtils\Tools\Exception\InvalidArgumentException;
 
-class ProjectGroup extends Model
+class ProjectGroup extends Base
 {
     /**
      * @var array

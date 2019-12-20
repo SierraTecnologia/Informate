@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Category;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class BibliotecaType extends Model
+class BibliotecaType extends Base
 {
 
     /**

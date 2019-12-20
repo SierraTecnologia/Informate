@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use SiUtils\Helper\File;
 
 // set_include_path(get_include_path() . get_include_path().'/phpseclib');
@@ -10,7 +10,7 @@ use SiUtils\Helper\File;
 use phpseclib\Net\SSH2;
 use phpseclib\Crypt\RSA as Crypt_RSA;
 
-class SshKey extends Model
+class SshKey extends Base
 {
 
     public static $apresentationName = 'Chaves SSH';

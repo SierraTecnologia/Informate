@@ -5,9 +5,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class DatabaseCollection extends Model
+class DatabaseCollection extends Base
 {
 
     public static $apresentationName = 'Tabelas dentro de Databases';

@@ -2,10 +2,10 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use SiUtils\Tools\Ssh;
 
-class Computer extends Model
+class Computer extends Base
 {
 
     public static $apresentationName = 'Servidores';

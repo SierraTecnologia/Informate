@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\About;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Gosto extends Model
+class Gosto extends Base
 {
 
     /**

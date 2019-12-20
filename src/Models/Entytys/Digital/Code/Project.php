@@ -5,10 +5,10 @@ namespace Informate\Models\Entytys\Digital\Code;
 use Doctrine\Common\Collections\ArrayCollection;
 use SiUtils\Tools\Programs\Git\Repository;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 use SiUtils\Helper\General;
 
-class Project extends Model
+class Project extends Base
 {
 
     public static $apresentationName = 'Projetos';

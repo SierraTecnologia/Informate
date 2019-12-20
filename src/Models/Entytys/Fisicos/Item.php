@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Fisicos;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Item extends Model
+class Item extends Base
 {
 
     /**

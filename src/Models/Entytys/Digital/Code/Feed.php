@@ -14,7 +14,7 @@ namespace Informate\Models\Entytys\Digital\Code;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
 /**
  * @author Julien DIDIER <genzo.wm@gmail.com>

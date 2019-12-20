@@ -12,9 +12,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Commit extends Model
+class Commit extends Base
 {
 
     public static $apresentationName = 'Commits';

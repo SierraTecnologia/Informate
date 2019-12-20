@@ -13,11 +13,11 @@
 namespace Informate\Models\Entytys\Digital\Bot;
 
 use Informate\Traits\ComplexRelationamentTrait;
-use Informate\Models\Model;
+use Support\Models\Base;
 use SiInteractions\Actions\Action;
 use Log;
 
-class Runner extends Model
+class Runner extends Base
 {
     use ComplexRelationamentTrait;
 

@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Field extends Model
+class Field extends Base
 {
 
     protected $organizationPerspective = false;

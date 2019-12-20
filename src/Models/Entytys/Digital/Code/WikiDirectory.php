@@ -12,7 +12,7 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-class WikiDirectory extends Model
+class WikiDirectory extends Base
 {
 
     protected $organizationPerspective = true;

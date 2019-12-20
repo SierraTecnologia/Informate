@@ -12,7 +12,7 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-class UserForgotPassword extends Model
+class UserForgotPassword extends Base
 {
 
     protected $organizationPerspective = true;

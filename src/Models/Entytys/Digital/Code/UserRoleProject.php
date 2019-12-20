@@ -14,7 +14,7 @@ namespace Informate\Models\Entytys\Digital\Code;
 
 use Gitonomy\Bundle\CoreBundle\Security\ProjectRole;
 
-class UserRoleProject extends Model
+class UserRoleProject extends Base
 {
 
     protected $organizationPerspective = true;

@@ -2,9 +2,9 @@
 
 namespace Population\Models\Features\Qa;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Analyser extends Model
+class Analyser extends Base
 {
 
     /**

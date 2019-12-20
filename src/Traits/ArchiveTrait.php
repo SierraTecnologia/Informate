@@ -3,9 +3,9 @@
 namespace Informate\Traits;
 
 use Log;
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class ArchiveTrait extends Model
+class ArchiveTrait extends Base
 {
     /**
      * Model contructuor.

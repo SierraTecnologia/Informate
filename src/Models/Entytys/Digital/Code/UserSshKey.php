@@ -12,7 +12,7 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-class UserSshKey extends Model
+class UserSshKey extends Base
 {
 
     protected $organizationPerspective = true;

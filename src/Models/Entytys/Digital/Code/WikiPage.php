@@ -12,9 +12,9 @@
 
 namespace Informate\Models\Entytys\Digital\Code;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class WikiPage extends Model
+class WikiPage extends Base
 {
 
     protected $organizationPerspective = true;

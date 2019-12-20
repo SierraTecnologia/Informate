@@ -5,9 +5,9 @@ namespace Informate\Models\Entytys\Digital\Code;
 use Doctrine\Common\Collections\ArrayCollection;
 use SiUtils\Tools\Programs\Git\Repository;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Lib extends Model
+class Lib extends Base
 {
 
     public static $apresentationName = 'Projetos';

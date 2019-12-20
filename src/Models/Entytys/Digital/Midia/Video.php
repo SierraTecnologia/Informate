@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Midia;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Video extends Model
+class Video extends Base
 {
 
     /**

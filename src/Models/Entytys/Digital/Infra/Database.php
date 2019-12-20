@@ -5,9 +5,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Database extends Model
+class Database extends Base
 {
 
     public static $apresentationName = 'Online Databases';

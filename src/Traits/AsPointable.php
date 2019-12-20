@@ -3,7 +3,7 @@
 namespace Informate\Traits;
 
 use Log;
-use Informate\Models\Model;
+use Support\Models\Base;
 use Auth;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;

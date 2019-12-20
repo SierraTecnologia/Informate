@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Category;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class VehicleType extends Model
+class VehicleType extends Base
 {
 
     /**

@@ -22,7 +22,7 @@ class CreateSkillsTable extends Migration
             $table->primary('code');
 			$table->string('name', 255)->nullable();
 			$table->string('description', 255)->nullable();
-			$table->integer('status')->nullable();
+			$table->integer('status')->default(1);
 			$table->string('skill_code')->nullable();
 			$table->timestamps();
             $table->softDeletes();

@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class DatabaseColumn extends Model
+class DatabaseColumn extends Base
 {
 
     protected $organizationPerspective = true;

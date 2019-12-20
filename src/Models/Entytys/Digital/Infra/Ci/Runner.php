@@ -2,9 +2,9 @@
 
 namespace Informate\Models\Entytys\Digital\Infra\Ci;
 
-use Informate\Models\Model;
+use Support\Models\Base;
 
-class Runner extends Model
+class Runner extends Base
 {
 
     protected $organizationPerspective = true;
