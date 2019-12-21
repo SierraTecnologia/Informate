@@ -16,19 +16,20 @@ class CreateInformateSocialPessoasTables extends Migration
         
 		Schema::create(config('app.db-prefix', '').'gostos', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-			$table->increments('id')->unsigned();
+            $table->string('code')->unique();
+            $table->primary('code');
 			$table->string('name', 255)->nullable();
 			$table->string('text', 255)->nullable();
 			$table->string('description', 255)->nullable();
 			$table->integer('status')->default(1);
-			$table->integer('gosto_id')->nullable();
+			$table->string('gosto_code')->nullable();
 			$table->timestamps();
             $table->softDeletes();
 		});
         
 		Schema::create(config('app.db-prefix', '').'gostoables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-			$table->integer('gosto_id')->nullable();
+			$table->string('gosto_code')->nullable();
 			$table->string('valor', 255)->nullable();
 			$table->string('gostoable_id');
 			$table->string('gostoable_type', 255);

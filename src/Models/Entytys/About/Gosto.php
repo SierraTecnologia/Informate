@@ -6,6 +6,13 @@ use Support\Models\Base;
 
 class Gosto extends Base
 {
+    
+    public $incrementing = false;
+    protected $casts = [
+        'code' => 'string',
+    ];
+    protected $primaryKey = 'code';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +23,7 @@ class Gosto extends Base
         'name',
         'text',
         'description',
-        'gosto_id'
+        'gosto_code'
     ];
 
     protected $mappingProperties = array(
@@ -35,7 +42,7 @@ class Gosto extends Base
             'type' => 'string',
             "analyzer" => "standard",
         ],
-        'gosto_id' => [
+        'gosto_code' => [
             'type' => 'string',
             "analyzer" => "standard",
         ],
@@ -50,11 +57,11 @@ class Gosto extends Base
     }
 
     /**
-     * Get all of the girls that are assigned this gosto.
+     * Get all of the persons that are assigned this gosto.
      */
-    public function girls()
+    public function persons()
     {
-        return $this->morphedByMany('Population\Models\Identity\Girl', 'gostoable');
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'gostoable');
     }
 
     /**

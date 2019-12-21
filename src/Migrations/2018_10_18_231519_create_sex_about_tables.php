@@ -23,6 +23,21 @@ class CreateSexAboutTables extends Migration
 			$table->timestamps();
             $table->softDeletes();
 		});
+		/**
+		 * Estão Se relacionando
+		 */
+		Schema::create('genderables', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
+			$table->increments('id')->unsigned();
+			$table->string('genderable_id');
+			$table->string('genderable_type', 255);
+
+            $table->unsignedInteger('gender_id')->nullable();
+            // $table->foreign('gender_id')->references('id')->on('genders');
+			$table->timestamps();
+            $table->softDeletes();
+        });
+
         
 		Schema::create('relation_types', function (Blueprint $table) {
 			$table->engine = 'InnoDB';

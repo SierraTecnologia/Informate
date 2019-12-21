@@ -36,7 +36,7 @@ class RelationType extends Base
      */
     public function relations()
     {
-        return $this->belongsToMany('Population\Models\Identity\Relation');
+        return $this->belongsToMany('Population\Models\Market\Relations\Relation');
     }
     
     /**
@@ -44,14 +44,6 @@ class RelationType extends Base
      */
     public function persons()
     {
-        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'skillable');
-    }
-
-    /**
-     * Get all of the users that are assigned this tag.
-     */
-    public function users()
-    {
-        return $this->morphedByMany('App\Models\User', 'skillable');
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'personable');
     }
 }
