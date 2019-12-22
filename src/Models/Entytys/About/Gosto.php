@@ -20,6 +20,7 @@ class Gosto extends Base
      * @var array
      */
     protected $fillable = [
+        'code',
         'name',
         'text',
         'description',
@@ -30,6 +31,10 @@ class Gosto extends Base
         /**
          * User Info
          */
+        'code' => [
+            'type' => 'string',
+            "analyzer" => "standard",
+        ],
         'name' => [
             'type' => 'string',
             "analyzer" => "standard",
@@ -53,7 +58,7 @@ class Gosto extends Base
      */
     public function businesses()
     {
-        return $this->morphedByMany(config('sitec-tools.models.business'), 'gostoable');
+        return $this->morphedByMany(config('sitec-tools.models.business', \Population\Models\Identity\Actors\Business::class), 'gostoable');
     }
 
     /**
