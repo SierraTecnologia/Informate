@@ -3,7 +3,7 @@
 namespace Informate\Models\Entytys\Fisicos;
 
 use Support\Models\Base;
-use Informate\Traits\AsFofocavel;
+use Population\Traits\AsFofocavel;
 
 class Weapon extends Base
 {
