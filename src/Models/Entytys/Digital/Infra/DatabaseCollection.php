@@ -55,7 +55,9 @@ class DatabaseCollection extends Base
 
     public function getApresentationName()
     {
-        return $this->database->getApresentationName().' - '.$this->name;
+        return $this->getName();
+        // // @todo Entender isso aqui
+        // return $this->database->getApresentationName().' - '.$this->name;
     }
 
 
