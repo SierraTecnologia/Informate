@@ -43,9 +43,4 @@ class Runner extends Base
         ],
     );
 
-
-    public function getDockerComposer()
-    {
-        return $this->belongsTo('App\Models\Gateway', 'gateway_id', 'id');
-    }
 }

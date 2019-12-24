@@ -44,11 +44,6 @@ class Trigger extends Base
     );
 
 
-    public function getDockerComposer()
-    {
-        return $this->belongsTo('App\Models\Gateway', 'gateway_id', 'id');
-    }
-
     /*# frozen_string_literal: true
 
     module Ci

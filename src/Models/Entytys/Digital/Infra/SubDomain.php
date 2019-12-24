@@ -37,20 +37,4 @@ class SubDomain extends Base
             "analyzer" => "standard",
         ],
     );
-
-
-    public function getDockerComposer()
-    {
-        return $this->belongsTo('App\Models\Gateway', 'gateway_id', 'id');
-    }
-
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User', 'user_id', 'id');
-    }
-
-    public function customer()
-    {
-        return $this->belongsTo('App\Models\Customer', 'customer_id', 'id');
-    }
 }

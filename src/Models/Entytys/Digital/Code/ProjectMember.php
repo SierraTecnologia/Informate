@@ -70,10 +70,6 @@ class ProjectMember extends Base
         ],
     );
 
-    public function customer()
-    {
-        return $this->belongsTo('App\Models\Customer', 'customer_id', 'id');
-    }
 
     public function analysis()
     {
