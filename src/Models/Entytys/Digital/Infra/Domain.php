@@ -58,22 +58,6 @@ class Domain extends Base
         return $url;
     }
 
-
-    public function getDockerComposer()
-    {
-        return $this->belongsTo('App\Models\Gateway', 'gateway_id', 'id');
-    }
-
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User', 'user_id', 'id');
-    }
-
-    public function customer()
-    {
-        return $this->belongsTo('App\Models\Customer', 'customer_id', 'id');
-    }
-
     public function urls()
     {
         return $this->hasMany('Informate\Models\Entytys\Digital\Internet\Url', 'infra_domain_id', 'id');
