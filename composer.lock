@@ -1829,16 +1829,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.61",
+            "version": "1.0.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "4fb13c01784a6c9f165a351e996871488ca2d8c9"
+                "reference": "14dd5d7dff5fbc29ca9a2a53ff109760e40d91a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4fb13c01784a6c9f165a351e996871488ca2d8c9",
-                "reference": "4fb13c01784a6c9f165a351e996871488ca2d8c9",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/14dd5d7dff5fbc29ca9a2a53ff109760e40d91a0",
+                "reference": "14dd5d7dff5fbc29ca9a2a53ff109760e40d91a0",
                 "shasum": ""
             },
             "require": {
@@ -1909,7 +1909,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-12-08T21:46:50+00:00"
+            "time": "2019-12-29T14:46:55+00:00"
         },
         {
             "name": "league/fractal",
@@ -3198,12 +3198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SierraTecnologia/laravel-support.git",
-                "reference": "391327d50238023ff6cdf8801f32065901c23de9"
+                "reference": "6bcf1bcc9c9b62e2a531d4fb1589f24c0308176b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/391327d50238023ff6cdf8801f32065901c23de9",
-                "reference": "391327d50238023ff6cdf8801f32065901c23de9",
+                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/6bcf1bcc9c9b62e2a531d4fb1589f24c0308176b",
+                "reference": "6bcf1bcc9c9b62e2a531d4fb1589f24c0308176b",
                 "shasum": ""
             },
             "require": {
@@ -3285,7 +3285,7 @@
                 "trait",
                 "validator"
             ],
-            "time": "2019-12-23T22:11:48+00:00"
+            "time": "2019-12-29T01:14:12+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
