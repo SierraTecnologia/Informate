@@ -28,7 +28,27 @@ class Comment extends Base
      */
     protected $fillable = [
         'value',
+        'content',
     ];
+
+
+    protected $mappingProperties = array(
+        /**
+         * User Info
+         */
+        'content' => [
+            'type' => 'string',
+            "analyzer" => "standard",
+        ],
+    );
+    
+    /**
+     * Get the owning commentable model.
+     */
+    public function commentable()
+    {
+        return $this->morphTo();
+    }
 
     /**
      * @inheritdoc

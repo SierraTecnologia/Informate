@@ -34,21 +34,6 @@ class Weapon extends Base
         ],
     );
 
-    /**
-     * Get all of the post's observations.
-     */
-    public function observations()
-    {
-        return $this->comments();
-    }
-
-    /**
-     * Get all of the post's comments.
-     */
-    public function comments()
-    {
-        return $this->morphMany('App\Models\Comment', 'commentable');
-    }
     
     /**
      * Get all of the slaves that are assigned this tag.
@@ -65,5 +50,32 @@ class Weapon extends Base
     {
         return $this->morphedByMany('App\Models\User', 'equipamentable');
     }
+
+    /**
+     * Get all of the post's observations.
+     */
+    public function observations()
+    {
+        return $this->comments();
+    }
+
+    /**
+     * Get all of the post's comments.
+     */
+    public function comments()
+    {
+        return $this->morphMany('Informate\Models\Comment', 'commentable');
+    }
+    
+    /**
+     * One To Many (Polymorphic) - Feature FA
+     *
+     * @return void
+     */
+    public function infos()
+    {
+        return $this->morphMany('Population\Models\Market\Abouts\Info', 'infoable');
+    }
+
 
 }
