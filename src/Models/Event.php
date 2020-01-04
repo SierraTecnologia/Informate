@@ -2,7 +2,7 @@
 
 namespace Gamer\Models\Calendar;
 
-use App\Models\CmsModel as BaseModel;
+use Support\Models\Base as BaseModel;
 use App\Services\Normalizer;
 use Informate\TraitsTranslatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
