@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
 
@@ -52,6 +52,6 @@ class DatabaseTable extends Base
 
     public function collection()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Infra\DatabaseCollection', 'collection_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Infra\DatabaseCollection', 'collection_id', 'id');
     }
 }

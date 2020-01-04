@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Code;
+namespace Population\Models\Entytys\Digital\Code;
 
 class ProjectGitAccess
 {

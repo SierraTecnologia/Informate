@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Code;
+namespace Population\Models\Entytys\Digital\Code;
 
 use Support\Models\Base;
 
@@ -49,7 +49,7 @@ class Commit extends Base
 
     public function project()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Code\Project', 'code_project_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Code\Project', 'code_project_id', 'id');
     }
 
 

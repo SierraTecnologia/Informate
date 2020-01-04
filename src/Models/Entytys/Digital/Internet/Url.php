@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Internet;
+namespace Population\Models\Entytys\Digital\Internet;
 
 use Informate\Traits\ComplexRelationamentTrait;
 use Support\Models\Base;
@@ -34,16 +34,16 @@ class Url extends Base
 
     public function linksFrom()
     {
-        return $this->hasMany('Informate\Models\Entytys\Digital\Internet\UrlLink', 'from_bot_internet_url_id', 'id');
+        return $this->hasMany('Population\Models\Entytys\Digital\Internet\UrlLink', 'from_bot_internet_url_id', 'id');
     }
 
     public function linksTo()
     {
-        return $this->hasMany('Informate\Models\Entytys\Digital\Internet\UrlLink', 'to_bot_internet_url_id', 'id');
+        return $this->hasMany('Population\Models\Entytys\Digital\Internet\UrlLink', 'to_bot_internet_url_id', 'id');
     }
 
     public function domain()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Infra\Domain', 'infra_domain_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Infra\Domain', 'infra_domain_id', 'id');
     }
 }

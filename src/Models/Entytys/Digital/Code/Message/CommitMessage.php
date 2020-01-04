@@ -10,9 +10,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Code\Message;
+namespace Population\Models\Entytys\Digital\Code\Message;
 
-use Informate\Models\Entytys\Digital\Code\Message;
+use Population\Models\Entytys\Digital\Code\Message;
 
 use SiUtils\Tools\Programs\Git\Log;
 

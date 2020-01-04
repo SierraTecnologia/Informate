@@ -3,7 +3,7 @@
  * Bancos dentro do Servidor do Database
  */
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
 
@@ -63,7 +63,7 @@ class DatabaseCollection extends Base
 
     public function database()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Infra\Database', 'infra_database_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Infra\Database', 'infra_database_id', 'id');
     }
 
     public function user()

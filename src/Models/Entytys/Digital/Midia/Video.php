@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Midia;
+namespace Population\Models\Entytys\Digital\Midia;
 
 use Support\Models\Base;
 

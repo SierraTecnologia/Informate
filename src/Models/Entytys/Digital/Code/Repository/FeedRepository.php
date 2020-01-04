@@ -10,12 +10,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Code\Repository;
+namespace Population\Models\Entytys\Digital\Code\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
-use Informate\Models\Entytys\Digital\Code\Project;
-use Informate\Models\Entytys\Digital\Code\Feed;
+use Population\Models\Entytys\Digital\Code\Project;
+use Population\Models\Entytys\Digital\Code\Feed;
 
 /**
  * @author Julien DIDIER <genzo.wm@gmail.com>

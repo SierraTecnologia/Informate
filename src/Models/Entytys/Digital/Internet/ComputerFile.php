@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Internet;
+namespace Population\Models\Entytys\Digital\Internet;
 
 use Informate\Traits\ArchiveTrait;
 

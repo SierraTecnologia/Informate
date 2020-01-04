@@ -3,7 +3,7 @@
  * Servidor de Database
  */
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
 

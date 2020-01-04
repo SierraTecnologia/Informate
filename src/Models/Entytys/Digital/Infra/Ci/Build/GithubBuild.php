@@ -1,14 +1,14 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra\Ci\Build;
+namespace Population\Models\Entytys\Digital\Infra\Ci\Build;
 
 use GuzzleHttp\Client;
 use SiUtils\Tools\Builder;
 use SiUtils\Helper\Diff;
 use SiUtils\Helper\Github;
 use SiUtils\Tools\Config;
-use Informate\Models\Entytys\Digital\Infra\Ci\Build;
-use Informate\Models\Entytys\Digital\Infra\Ci\BuildError;
+use Population\Models\Entytys\Digital\Infra\Ci\Build;
+use Population\Models\Entytys\Digital\Infra\Ci\BuildError;
 
 /**
  * Github Build Model

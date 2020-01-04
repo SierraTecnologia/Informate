@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Code;
+namespace Population\Models\Entytys\Digital\Code;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;

@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Bot;
+namespace Population\Models\Entytys\Digital\Bot;
 
 use Informate\Traits\ComplexRelationamentTrait;
 use Support\Models\Base;

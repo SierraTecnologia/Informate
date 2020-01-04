@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Code;
+namespace Population\Models\Entytys\Digital\Code;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use SiUtils\Tools\Programs\Git\Repository;

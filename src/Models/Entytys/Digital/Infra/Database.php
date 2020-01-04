@@ -3,7 +3,7 @@
  * Servidor de Database
  */
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
 
@@ -58,6 +58,6 @@ class Database extends Base
 
     public function collections()
     {
-        return $this->hasMany('Informate\Models\Entytys\Digital\Infra\DatabaseCollection');
+        return $this->hasMany('Population\Models\Entytys\Digital\Infra\DatabaseCollection');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra\Ci\Build;
+namespace Population\Models\Entytys\Digital\Infra\Ci\Build;
 
 /**
  * GogsBuild Build Model

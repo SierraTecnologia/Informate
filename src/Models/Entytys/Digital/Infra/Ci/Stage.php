@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra\Ci;
+namespace Population\Models\Entytys\Digital\Infra\Ci;
 
 use Support\Models\Base;
 

@@ -12,7 +12,7 @@ trait ComplexRelationamentInTrait
 {
     // Acrescentar na tabela
     // protected static $COMPLEX_RELATIONAMENT_IN_MODELS = [
-    //     \Informate\Models\Entytys\Digital\Bot\Task::class
+    //     \Population\Models\Entytys\Digital\Bot\Task::class
     // ];
 
     public static function getTableName()

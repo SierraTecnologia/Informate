@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
 
@@ -46,7 +46,7 @@ class ServiceAccount extends Base
 
     public function service()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Infra\Service', 'infra_service_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Infra\Service', 'infra_service_id', 'id');
     }
 
     public function user()

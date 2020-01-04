@@ -10,13 +10,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Code;
+namespace Population\Models\Entytys\Digital\Code;
 
 use Gitonomy\Bundle\CoreBundle\EventDispatcher\Event\PushReferenceEvent;
 
-use Informate\Models\Entytys\Digital\Code\Message\CloseMessage;
-use Informate\Models\Entytys\Digital\Code\Message\CommitMessage;
-use Informate\Models\Entytys\Digital\Code\Message\ForceMessage;
+use Population\Models\Entytys\Digital\Code\Message\CloseMessage;
+use Population\Models\Entytys\Digital\Code\Message\CommitMessage;
+use Population\Models\Entytys\Digital\Code\Message\ForceMessage;
 
 /**
  * @author Julien DIDIER <genzo.wm@gmail.com>

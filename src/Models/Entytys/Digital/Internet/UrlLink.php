@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Internet;
+namespace Population\Models\Entytys\Digital\Internet;
 
 use Support\Models\Base;
 
@@ -32,11 +32,11 @@ class UrlLink extends Base
 
     public function from()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Internet\Url', 'from_bot_internet_url_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Internet\Url', 'from_bot_internet_url_id', 'id');
     }
 
     public function to()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Internet\Url', 'to_bot_internet_url_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Internet\Url', 'to_bot_internet_url_id', 'id');
     }
 }

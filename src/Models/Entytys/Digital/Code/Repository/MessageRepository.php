@@ -1,10 +1,10 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Code\Repository;
+namespace Population\Models\Entytys\Digital\Code\Repository;
 
 use Doctrine\ORM\EntityRepository;
-use Informate\Models\Entytys\Digital\Code\Project;
-use Informate\Models\Entytys\Digital\Code\User;
+use Population\Models\Entytys\Digital\Code\Project;
+use Population\Models\Entytys\Digital\Code\User;
 use Gitonomy\Component\Pagination\Adapter\ArrayAdapter;
 use Gitonomy\Component\Pagination\Adapter\DoctrineOrmQueryAdapter;
 use Gitonomy\Component\Pagination\Pager;

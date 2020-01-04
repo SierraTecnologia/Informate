@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Informate\Models\Entytys\Digital\Code\Repository;
+namespace Population\Models\Entytys\Digital\Code\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Midia;
+namespace Population\Models\Entytys\Digital\Midia;
 
 use SiObjects\Manipule\Builders\ThumbnailBuilder;
 use Informate\Features\Photos\Entities\ThumbnailEntity;

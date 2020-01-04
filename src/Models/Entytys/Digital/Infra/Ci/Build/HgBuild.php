@@ -1,8 +1,8 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra\Ci\Build;
+namespace Population\Models\Entytys\Digital\Infra\Ci\Build;
 
-use Informate\Models\Entytys\Digital\Infra\Ci\Build;
+use Population\Models\Entytys\Digital\Infra\Ci\Build;
 use SiUtils\Tools\Builder;
 
 /**

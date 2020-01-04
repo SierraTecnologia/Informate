@@ -1,9 +1,9 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
-use Informate\Models\Entytys\Digital\Internet\Url;
+use Population\Models\Entytys\Digital\Internet\Url;
 
 class Domain extends Base
 {
@@ -60,6 +60,6 @@ class Domain extends Base
 
     public function urls()
     {
-        return $this->hasMany('Informate\Models\Entytys\Digital\Internet\Url', 'infra_domain_id', 'id');
+        return $this->hasMany('Population\Models\Entytys\Digital\Internet\Url', 'infra_domain_id', 'id');
     }
 }

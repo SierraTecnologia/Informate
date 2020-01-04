@@ -2,7 +2,7 @@
 
 namespace SiUtils\Tools\Model;
 
-use Informate\Models\Entytys\Digital\Infra\Ci\Base\BuildError as BaseBuildError;
+use Population\Models\Entytys\Digital\Infra\Ci\Base\BuildError as BaseBuildError;
 use SiUtils\Tools\Store\BuildStore;
 use SiUtils\Tools\Store\Factory;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Informate\Models\Entytys\Digital\Infra;
+namespace Population\Models\Entytys\Digital\Infra;
 
 use Support\Models\Base;
 use SiUtils\Tools\Ssh;
@@ -45,6 +45,6 @@ class Logger extends Base
 
     public function computer()
     {
-        return $this->belongsTo('Informate\Models\Entytys\Digital\Infra\Computer', 'computer_id', 'id');
+        return $this->belongsTo('Population\Models\Entytys\Digital\Infra\Computer', 'computer_id', 'id');
     }
 }
