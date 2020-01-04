@@ -6,11 +6,11 @@ use Support\Models\Base as BaseModel;
 use App\Services\Normalizer;
 use Informate\TraitsTranslatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Informate\TraitsBusinessTrait;
+// use Informate\TraitsBusinessTrait;
 
 class Event extends BaseModel
 {
-    use Translatable, SoftDeletes, BusinessTrait;
+    use Translatable, SoftDeletes; //, BusinessTrait;
 
     public $table = 'events';
 

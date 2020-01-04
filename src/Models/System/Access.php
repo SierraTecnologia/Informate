@@ -9,7 +9,6 @@ use Support\Models\Base;
 
 class Access extends Base
 {
-    // use BusinessTrait;
 
     /**
      * o proprio modelo terá o tipo de acesso:
