@@ -13,12 +13,11 @@
 namespace Informate\Models\Entytys\Digital\Bot;
 
 use Informate\Traits\ComplexRelationamentTrait;
-use Informate\Traits\TasksTrait;
 use Support\Models\Base;
 
 class Task extends Base
 {
-    use ComplexRelationamentTrait, TasksTrait;
+    use ComplexRelationamentTrait;
 
     protected $organizationPerspective = true;
 

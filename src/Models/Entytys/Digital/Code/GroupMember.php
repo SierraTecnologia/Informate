@@ -9,8 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Hash;
 use Informate\Traits\EloquentGetTableNameTrait;
+use Support\Models\Base;
 
-class CreditCardToken extends InterfaceBusinessModel
+class GroupMember extends Base
 {
     use EloquentGetTableNameTrait;
 
