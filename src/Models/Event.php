@@ -7,6 +7,7 @@ use App\Services\Normalizer;
 use Informate\TraitsTranslatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 // use Informate\TraitsBusinessTrait;
+use Informate\Models\System\Archive;
 
 class Event extends BaseModel
 {

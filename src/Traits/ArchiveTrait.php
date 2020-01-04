@@ -4,6 +4,7 @@ namespace Informate\Traits;
 
 use Log;
 use Support\Models\Base;
+use Informate\Models\System\Archive;
 
 class ArchiveTrait extends Base
 {
