@@ -19,5 +19,5 @@ class Analytics extends ArchiveTrait
         'data',
     ];
 
-    public static $rules = [];
+    public $rules = [];
 }

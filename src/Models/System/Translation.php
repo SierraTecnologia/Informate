@@ -20,7 +20,7 @@ class Translation extends ArchiveTrait
 
     protected $guarded = [];
 
-    public static $rules = [];
+    public $rules = [];
 
     protected $fillable = [
         'entity_id',

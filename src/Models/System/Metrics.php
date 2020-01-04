@@ -15,5 +15,5 @@ class Metrics extends ArchiveTrait
         'data',
     ];
 
-    public static $rules = [];
+    public $rules = [];
 }

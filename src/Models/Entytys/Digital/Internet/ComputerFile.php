@@ -49,7 +49,7 @@ class ComputerFile extends ArchiveTrait
         'link', //false
     ];
 
-    public static $rules = [
+    public $rules = [
         
     ];
 

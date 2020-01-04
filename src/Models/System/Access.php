@@ -27,5 +27,5 @@ class Access extends Base
         'access_type',
     ];
 
-    public static $rules = [];
+    public $rules = [];
 }
