@@ -4,7 +4,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCienciaGrandezaTables extends Migration
+class CreateCienciaGrandezasTables extends Migration
 {
     /**
      * Run the migrations.
