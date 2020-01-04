@@ -1,23 +1,22 @@
 <?php
 
-namespace Informate\Models\Entytys\About;
+namespace Informate\Models\Ciencia\Padroes;
 
 use Support\Models\Base;
 
-class Skill extends Base
+class Medida extends Base
 {
 
     protected $organizationPerspective = false;
 
-    protected $table = 'skills';
+    protected $table = 'medidas';
     
     public $incrementing = false;
     protected $casts = [
         'code' => 'string',
     ];
     protected $primaryKey = 'code';
-    protected $keyType = 'string';
-
+    protected $keyType = 'string';  
 
     /**
      * The attributes that are mass assignable.
@@ -26,20 +25,18 @@ class Skill extends Base
      */
     protected $fillable = [
         'name',
-        'description',
         'code',
-        'status',
-        'skill_code'
+        'medida_type_id',
     ];
 
 
     protected $mappingProperties = array(
 
-        'name' => [
-            'type' => 'integer',
+        'medida_type_code' => [
+            'type' => 'string',
             "analyzer" => "standard",
         ],
-        'description' => [
+        'name' => [
             'type' => 'string',
             "analyzer" => "standard",
         ],
@@ -49,11 +46,16 @@ class Skill extends Base
         ],
     );
 
+    public function medidaType()
+    {
+        return $this->belongsTo('Informate\Models\Ciencia\Padroes', 'medida_type_code', 'code');
+    }
+
     /**
      * Get all of the persons that are assigned this tag.
      */
     public function persons()
     {
-        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'skillable');
+        return $this->morphedByMany('Population\Models\Identity\Actors\Person', 'medidable');
     }
 }
