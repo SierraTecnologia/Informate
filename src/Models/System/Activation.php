@@ -2,7 +2,7 @@
 
 namespace Informate\Models\System;
 
-use Informate\Modela\Model;
+use Support\Models\Base
 
 class Activation extends Base
 {
