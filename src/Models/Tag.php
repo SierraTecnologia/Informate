@@ -14,6 +14,7 @@ use Informate\TraitsTranslatable;
 use Illuminate\Database\Eloquent\Builder;
 use Informate\TraitsSortableTrait;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
+use TCG\Voyager\Models\Post;
 
 /**
  * Class Tag.
