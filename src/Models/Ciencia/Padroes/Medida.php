@@ -48,7 +48,7 @@ class Medida extends Base
 
     public function medidaType()
     {
-        return $this->belongsTo('Informate\Models\Ciencia\Padroes', 'medida_type_code', 'code');
+        return $this->belongsTo('Informate\Models\Ciencia\Padroes\Medida', 'medida_type_code', 'code');
     }
 
     /**

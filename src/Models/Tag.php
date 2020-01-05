@@ -72,13 +72,14 @@ class Tag extends Base implements Sortable
         return parent::newQuery();
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function posts()
-    {
-        return $this->belongsToMany(Post::class, Tables::TABLE_POSTS_TAGS);
-    }
+    // @todo Carregar Modelo Post para Blog
+    // /**
+    //  * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    //  */
+    // public function posts()
+    // {
+    //     return $this->belongsToMany(Post::class, Tables::TABLE_POSTS_TAGS);
+    // }
 
     /**
      * Setter for the 'value' attribute.

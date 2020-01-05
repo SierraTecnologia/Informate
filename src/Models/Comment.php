@@ -4,7 +4,7 @@ namespace Informate\Models;
 
 use SiObjects\Manipule\Builders\CommentBuilder;
 use App\Contants\Tables;
-use App\Features\Photos\Entities\CommentEntity;
+use SiObjects\Manipule\Entities\CommentEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
 
@@ -78,13 +78,14 @@ class Comment extends Base
         return parent::newQuery();
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function posts()
-    {
-        return $this->belongsToMany(Post::class, Tables::TABLE_POSTS_TAGS);
-    }
+    // @todo Carregar Modelo Post para Blog
+    // /**
+    //  * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    //  */
+    // public function posts()
+    // {
+    //     return $this->belongsToMany(Post::class, Tables::TABLE_POSTS_TAGS);
+    // }
 
     /**
      * Setter for the 'value' attribute.
