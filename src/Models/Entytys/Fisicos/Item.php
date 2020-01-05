@@ -42,8 +42,7 @@ class Item extends Base
     public function businesses()
     {
         return $this->morphedByMany(config('sitec-tools.models.business', \Population\Models\Identity\Actors\Business::class), 'itemable');
-    }//aqui
-    ;
+    }
 
     /**
      * Get all of the girls that are assigned this item.
@@ -58,6 +57,6 @@ class Item extends Base
      */
     public function users()
     {
-        return $this->morphedByMany('App\Models\User', 'itemable');
+        return $this->morphedByMany(config('sitec.core.models.user', \App\Models\User::class), 'itemable');
     }
 }
