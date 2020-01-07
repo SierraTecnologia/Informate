@@ -6,7 +6,7 @@ use App\Models\User;
 
 use Support\Models\Base;
 use Population\Models\Identity\Actors\Business;
-use Informate\Models\System\Language;
+use RicardoSierra\Translation\Models\Language;
 use Informate\Traits\EloquentGetTableNameTrait;
 
 class Setting extends Base
@@ -63,7 +63,7 @@ class Setting extends Base
                 'code' => '',
                 'options' => 'string',
                 'defaultValue' => 'PT',
-                'target' => User::class,
+                'target' => config('sitec.core.models.user', \App\Models\User::class),
                 'config' => null,
             ],
             [
@@ -72,7 +72,7 @@ class Setting extends Base
                 'code' => '',
                 'options' => 'string',
                 'defaultValue' => 'BTC',
-                'target' => User::class,
+                'target' => config('sitec.core.models.user', \App\Models\User::class),
                 'config' => null,
             ],
         ];

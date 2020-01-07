@@ -10,7 +10,7 @@ class Activation extends Base
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(config('sitec.core.models.user', \App\Models\User::class));
     }
 
 }
