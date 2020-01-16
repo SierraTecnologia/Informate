@@ -1,10 +1,10 @@
 <?php
 
-namespace Gamer\Models\Calendar;
+namespace Informate\Models;
 
 use Support\Models\Base as BaseModel;
 use App\Services\Normalizer;
-use Informate\TraitsTranslatable;
+use Informate\Traits\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 // use Informate\TraitsBusinessTrait;
 use Informate\Models\System\Archive;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gamer\Models;
+namespace Informate\Models;
 
 use SiObjects\Manipule\Builders\TagBuilder;
 use App\Contants\Tables;
@@ -9,10 +9,9 @@ use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
 use Informate\Traits\HasSlug;
 
-use App\Interfaces\Sortable;
-use Informate\TraitsTranslatable;
+use Support\ClassesHelpers\Interfaces\Sortable;
+use Informate\Traits\Translatable;
 use Illuminate\Database\Eloquent\Builder;
-use Informate\TraitsSortableTrait;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
 use TCG\Voyager\Models\Post;
 
@@ -26,7 +25,7 @@ use TCG\Voyager\Models\Post;
  */
 class Tag extends Base implements Sortable
 {
-    use SortableTrait, Translatable, HasSlug;
+    use Translatable, HasSlug;
 
     public $translatable = ['name', 'code'];
 
