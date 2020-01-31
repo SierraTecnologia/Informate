@@ -2,9 +2,9 @@
 
 namespace Informate\Models;
 
-use SiObjects\Manipule\Builders\TagBuilder;
+use Population\Manipule\Builders\TagBuilder;
 use App\Contants\Tables;
-use SiObjects\Manipule\Entities\TagEntity;
+use Population\Manipule\Entities\TagEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
 use Informate\Traits\HasSlug;

@@ -2,9 +2,9 @@
 
 namespace Informate\Models;
 
-use SiObjects\Manipule\Builders\CommentBuilder;
+use Population\Manipule\Builders\CommentBuilder;
 use App\Contants\Tables;
-use SiObjects\Manipule\Entities\CommentEntity;
+use Population\Manipule\Entities\CommentEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
 use TCG\Voyager\Models\Post;
