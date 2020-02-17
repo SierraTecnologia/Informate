@@ -2,7 +2,7 @@
 
 namespace Informate\Models;
 
-use TCG\Voyager\Models\Post as BaseModel;
+use Facilitador\Models\Post as BaseModel;
 
 /**
  * Class Post.

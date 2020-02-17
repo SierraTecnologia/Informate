@@ -13,7 +13,7 @@ use Support\ClassesHelpers\Interfaces\Sortable;
 use Informate\Traits\Translatable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
-use TCG\Voyager\Models\Post;
+use Facilitador\Models\Post;
 
 /**
  * Class Tag.
