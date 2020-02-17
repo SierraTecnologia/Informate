@@ -3772,12 +3772,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SierraTecnologia/laravel-support.git",
-                "reference": "62fa203f914e628e8e6392023d156f12bd63eb58"
+                "reference": "ebbf88f51e2e6b88e32721c44ff6539c815f446a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/62fa203f914e628e8e6392023d156f12bd63eb58",
-                "reference": "62fa203f914e628e8e6392023d156f12bd63eb58",
+                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/ebbf88f51e2e6b88e32721c44ff6539c815f446a",
+                "reference": "ebbf88f51e2e6b88e32721c44ff6539c815f446a",
                 "shasum": ""
             },
             "require": {
@@ -3860,7 +3860,7 @@
                 "trait",
                 "validator"
             ],
-            "time": "2020-02-17T06:54:18+00:00"
+            "time": "2020-02-17T06:56:28+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
