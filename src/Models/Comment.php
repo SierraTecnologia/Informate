@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
 use Facilitador\Models\Post;
 
+use Finder\Models\Reference;
+
 /**
  * Class Comment.
  *
@@ -111,4 +113,46 @@ class Comment extends Base
             'value' => $this->value,
         ]);
     }
+    
+    // @todo fazer
+    public static function registerCommentForProject($comment, $projectUrl = false)
+    {
+        // $comment =  self::firstOrCreate([
+        //     'name' => $comment->name
+        // ]);
+
+        // if ($projectUrl) {
+        //     if (!$reference = Reference::where([
+        //         'code' => $projectUrl
+        //     ])->first()) {
+        //         $reference = Reference::create([
+        //             'code' => $projectUrl,
+        //             'name' => $projectUrl,
+        //         ]);
+        //     }
+        //     if (!$comment->references()->where('reference_id', $reference->id)->first()) {
+        //         $comment->references()->save(
+        //             $reference,
+        //             [
+        //                 'identify' => $comment->id,
+        //             ]
+        //         );
+        //     }
+        // }
+        // return $comment;
+
+        // foreach($comments as $comment) {
+        //     var_dump($comment);
+        //     Coment::firstOrCreate([
+        //         'name' => $comment->name
+        //     ]);
+        // }
+    }
+    
+    public function references()
+    {
+        return $this->morphToMany(Reference::class, 'referenceable');
+    }
+    
+}
 }
