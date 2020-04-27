@@ -155,4 +155,3 @@ class Comment extends Base
     }
     
 }
-}

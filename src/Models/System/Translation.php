@@ -12,32 +12,7 @@ use Informate\Traits\ArchiveTrait;
  * Aqui é para Campos do Modelo e la nao !
  */
 
-class Translation extends ArchiveTrait
+class Translation extends \RicardoSierra\Translation\Models\Translation
 {
-    public $table = 'model_translations';
-
-    public $primaryKey = 'id';
-
-    protected $guarded = [];
-
-    public $rules = [];
-
-    protected $fillable = [
-        'entity_id',
-        'entity_type',
-        'entity_data',
-        'language',
-    ];
-
-    public function getDataAttribute()
-    {
-        $object = app($this->entity_type);
-
-        $attributes = (array) json_decode($this->entity_data);
-        $object->attributes = array_merge($attributes, [
-            'id' => $this->entity_id,
-        ]);
-
-        return $object;
-    }
+    
 }
