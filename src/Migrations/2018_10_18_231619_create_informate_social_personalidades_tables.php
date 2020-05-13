@@ -13,7 +13,7 @@ class CreateInformateSocialPersonalidadesTables extends Migration
 	public function up()
 	{
         
-		Schema::create(config('app.db-prefix', '').'tastes', function (Blueprint $table) {
+		Schema::create('tastes', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
 			$table->string('url', 255);
@@ -22,7 +22,7 @@ class CreateInformateSocialPersonalidadesTables extends Migration
 			$table->timestamps();
             $table->softDeletes();
 		});
-		Schema::create(config('app.db-prefix', '').'tasteables', function (Blueprint $table) {
+		Schema::create('tasteables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->integer('taste_id');
 			$table->string('tasteable_id');

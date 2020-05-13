@@ -14,7 +14,7 @@ class CreateInformateSocialPessoasTables extends Migration
 	{
         
         
-		Schema::create(config('app.db-prefix', '').'gostos', function (Blueprint $table) {
+		Schema::create('gostos', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
             $table->string('code')->unique();
             $table->primary('code');
@@ -27,7 +27,7 @@ class CreateInformateSocialPessoasTables extends Migration
             $table->softDeletes();
 		});
         
-		Schema::create(config('app.db-prefix', '').'gostoables', function (Blueprint $table) {
+		Schema::create('gostoables', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->string('gosto_code')->nullable();
 			$table->string('valor', 255)->nullable();
@@ -37,7 +37,7 @@ class CreateInformateSocialPessoasTables extends Migration
             $table->softDeletes();
 		});
         
-		Schema::create(config('app.db-prefix', '').'items', function (Blueprint $table) {
+		Schema::create('items', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
 			$table->string('name', 255);

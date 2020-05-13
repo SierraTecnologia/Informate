@@ -18,7 +18,7 @@ class ArchiveTrait extends Base
         parent::__construct($attributes);
 
         if (config('cms.db-prefix', '')) {
-            $this->table = config('cms.db-prefix', '').$this->table;
+            $this->table = $this->table;
         }
     }
 
