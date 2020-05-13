@@ -51,7 +51,7 @@ class CollaboratorType extends Base
 
     public function user()
     {
-        return $this->belongsTo(config('sitec.core.models.user', \App\Models\User::class), 'user_id', 'id');
+        return $this->belongsTo(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'user_id', 'id');
     }
 
 }

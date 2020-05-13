@@ -41,7 +41,7 @@ class Item extends Base
      */
     public function businesses()
     {
-        return $this->morphedByMany(config('sitec-tools.models.business', \Population\Models\Identity\Actors\Business::class), 'itemable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Population\Models\Identity\Actors\Business::class), 'itemable');
     }
 
     /**
@@ -57,6 +57,6 @@ class Item extends Base
      */
     public function users()
     {
-        return $this->morphedByMany(config('sitec.core.models.user', \App\Models\User::class), 'itemable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'itemable');
     }
 }

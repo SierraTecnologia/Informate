@@ -84,7 +84,7 @@ trait Translatable
      */
     public function afterCreate($payload)
     {
-        if (config('cms.auto-translate', false)) {
+        if (\Illuminate\Support\Facades\Config::get('cms.auto-translate', false)) {
             $entry = $payload->toArray();
 
             unset($entry['created_at']);
@@ -94,9 +94,9 @@ trait Translatable
             unset($entry['published_at']);
             unset($entry['id']);
 
-            foreach (config('cms.languages') as $code => $language) {
-                if ($code != config('cms.default-language')) {
-                    $tr = new GoogleTranslate(config('cms.default-language'), $code);
+            foreach (\Illuminate\Support\Facades\Config::get('cms.languages') as $code => $language) {
+                if ($code != \Illuminate\Support\Facades\Config::get('cms.default-language')) {
+                    $tr = new GoogleTranslate(\Illuminate\Support\Facades\Config::get('cms.default-language'), $code);
                     $translation = [
                         'lang' => $code,
                         'template' => 'show',

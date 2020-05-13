@@ -35,7 +35,7 @@ class Gender extends Base
      */
     public function persons()
     {
-        return $this->morphedByMany(config('sitec.core.models.person', \Population\Models\Identity\Actors\Person::class), 'genderable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Population\Models\Identity\Actors\Person::class), 'genderable');
     }
 
     /**
@@ -43,6 +43,6 @@ class Gender extends Base
      */
     public function users()
     {
-        return $this->morphedByMany(config('sitec.core.models.user', \App\Models\User::class), 'genderable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'genderable');
     }
 }

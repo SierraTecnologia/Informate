@@ -63,7 +63,7 @@ class Setting extends Base
                 'code' => '',
                 'options' => 'string',
                 'defaultValue' => 'PT',
-                'target' => config('sitec.core.models.user', \App\Models\User::class),
+                'target' => \Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class),
                 'config' => null,
             ],
             [
@@ -72,7 +72,7 @@ class Setting extends Base
                 'code' => '',
                 'options' => 'string',
                 'defaultValue' => 'BTC',
-                'target' => config('sitec.core.models.user', \App\Models\User::class),
+                'target' => \Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class),
                 'config' => null,
             ],
         ];

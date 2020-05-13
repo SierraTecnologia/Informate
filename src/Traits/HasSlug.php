@@ -18,7 +18,7 @@ trait HasSlug
 
     protected function generateSlug(string $locale): string
     {
-        $slugger = config('tags.slugger');
+        $slugger = \Illuminate\Support\Facades\Config::get('tags.slugger');
 
         $slugger = $slugger ?: '\Illuminate\Support\Str::slug';
 
