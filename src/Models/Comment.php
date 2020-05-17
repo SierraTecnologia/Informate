@@ -17,7 +17,7 @@ use Finder\Models\Reference;
  * @property int id
  * @property string value
  * @property Collection posts
- * @package App\Models
+ * @package  App\Models
  */
 class Comment extends Base
 {
@@ -60,9 +60,11 @@ class Comment extends Base
     {
         parent::boot();
 
-        static::deleting(function (self $comment) {
-            $comment->posts()->detach();
-        });
+        static::deleting(
+            function (self $comment) {
+                $comment->posts()->detach();
+            }
+        );
     }
 
     /**
@@ -93,7 +95,7 @@ class Comment extends Base
     /**
      * Setter for the 'value' attribute.
      *
-     * @param string $value
+     * @param  string $value
      * @return $this
      */
     public function setValueAttribute(string $value)
@@ -108,10 +110,12 @@ class Comment extends Base
      */
     public function toEntity(): CommentEntity
     {
-        return new CommentEntity([
+        return new CommentEntity(
+            [
             'id' => $this->id,
             'value' => $this->value,
-        ]);
+            ]
+        );
     }
     
     // @todo fazer

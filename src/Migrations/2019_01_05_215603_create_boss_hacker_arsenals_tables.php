@@ -13,25 +13,29 @@ class CreateBossHackerArsenalsTables extends Migration
      */
     public function up()
     {
-        Schema::create('weapons', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('url')->nullable();
-            $table->string('description')->nullable();
-            $table->string('obs')->nullable();
-            $table->timestamps();
-        });
-		Schema::create('weaponables', function (Blueprint $table) {
-			$table->engine = 'InnoDB';
-			$table->increments('id')->unsigned();
-			$table->string('weaponable_id');
-			$table->string('weaponable_type', 255);
+        Schema::create(
+            'weapons', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->string('url')->nullable();
+                $table->string('description')->nullable();
+                $table->string('obs')->nullable();
+                $table->timestamps();
+            }
+        );
+        Schema::create(
+            'weaponables', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->increments('id')->unsigned();
+                $table->string('weaponable_id');
+                $table->string('weaponable_type', 255);
 
-            $table->unsignedInteger('weapon_id')->nullable();
-            // $table->foreign('weapon_id')->references('id')->on('weapons');
-			$table->timestamps();
-            $table->softDeletes();
-		});
+                $table->unsignedInteger('weapon_id')->nullable();
+                // $table->foreign('weapon_id')->references('id')->on('weapons');
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
 
     }
 

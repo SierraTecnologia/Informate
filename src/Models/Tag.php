@@ -21,7 +21,7 @@ use Facilitador\Models\Post;
  * @property int id
  * @property string value
  * @property Collection posts
- * @package App\Models
+ * @package  App\Models
  */
 class Tag extends Base implements Sortable
 {
@@ -51,9 +51,11 @@ class Tag extends Base implements Sortable
     {
         parent::boot();
 
-        static::deleting(function (self $tag) {
-            $tag->posts()->detach();
-        });
+        static::deleting(
+            function (self $tag) {
+                $tag->posts()->detach();
+            }
+        );
     }
 
     /**
@@ -84,7 +86,7 @@ class Tag extends Base implements Sortable
     /**
      * Setter for the 'value' attribute.
      *
-     * @param string $value
+     * @param  string $value
      * @return $this
      */
     public function setValueAttribute(string $value)
@@ -99,10 +101,12 @@ class Tag extends Base implements Sortable
      */
     public function toEntity(): TagEntity
     {
-        return new TagEntity([
+        return new TagEntity(
+            [
             'id' => $this->id,
             'value' => $this->value,
-        ]);
+            ]
+        );
     }
 
     public function scopeWithType(Builder $query, string $type = null): Builder
@@ -125,20 +129,22 @@ class Tag extends Base implements Sortable
 
     /**
      * @param string|array|\ArrayAccess $values
-     * @param string|null $type
-     * @param string|null $locale
+     * @param string|null               $type
+     * @param string|null               $locale
      *
      * @return \App\Models\Tag|static
      */
     public static function findOrCreate($values, string $type = null, string $locale = null)
     {
-        $tags = collect($values)->map(function ($value) use ($type, $locale) {
-            if ($value instanceof self) {
-                return $value;
-            }
+        $tags = collect($values)->map(
+            function ($value) use ($type, $locale) {
+                if ($value instanceof self) {
+                    return $value;
+                }
 
-            return static::findOrCreateFromString($value, $type, $locale);
-        });
+                return static::findOrCreateFromString($value, $type, $locale);
+            }
+        );
 
         return is_string($values) ? $tags->first() : $tags;
     }
@@ -174,10 +180,12 @@ class Tag extends Base implements Sortable
         $tag = static::findFromString($name, $type, $locale);
 
         if (! $tag) {
-            $tag = static::create([
+            $tag = static::create(
+                [
                 'name' => [$locale => $name],
                 'type' => $type,
-            ]);
+                ]
+            );
         }
 
         return $tag;

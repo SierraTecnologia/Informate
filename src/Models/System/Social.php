@@ -3,7 +3,8 @@ namespace Informate\Models\System;
 
 use Support\Models\Base;
 
-class Social extends Base {
+class Social extends Base
+{
 
     protected $table = 'social_logins';
 

@@ -15,16 +15,18 @@ class CreateFisicoVeiculosTables extends Migration
     {
         
 
-      /**
-      * Veiculo Type
-      */
-      Schema::create('vehicle_types', function (Blueprint $table) {
-        $table->engine = 'InnoDB';
-        $table->increments('id')->unsigned();
-        $table->string('name', 255)->nullable();
-        $table->timestamps();
-              $table->softDeletes();
-      });
+        /**
+        * Veiculo Type
+        */
+        Schema::create(
+            'vehicle_types', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->increments('id')->unsigned();
+                $table->string('name', 255)->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
       
     }
 
@@ -35,6 +37,6 @@ class CreateFisicoVeiculosTables extends Migration
      */
     public function down()
     {
-      Schema::dropIfExists('vehicle_types');
+        Schema::dropIfExists('vehicle_types');
     }
 }

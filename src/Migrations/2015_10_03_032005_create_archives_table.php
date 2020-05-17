@@ -10,14 +10,16 @@ class CreateArchivesTable extends Migration
      */
     public function up()
     {
-        Schema::create('archives', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('token');
-            $table->integer('entity_id');
-            $table->string('entity_type');
-            $table->text('entity_data');
-            $table->nullableTimestamps();
-        });
+        Schema::create(
+            'archives', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('token');
+                $table->integer('entity_id');
+                $table->string('entity_type');
+                $table->text('entity_data');
+                $table->nullableTimestamps();
+            }
+        );
     }
 
     /**

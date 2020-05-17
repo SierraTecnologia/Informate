@@ -185,16 +185,20 @@ trait Translatable
         if ($key !== null) {
             $this->guardAgainstNonTranslatableAttribute($key);
 
-            return array_filter(json_decode($this->getAttributes()[$key] ?? '' ?: '{}', true) ?: [], function ($value) {
-                return $value !== null && $value !== '';
-            });
+            return array_filter(
+                json_decode($this->getAttributes()[$key] ?? '' ?: '{}', true) ?: [], function ($value) {
+                    return $value !== null && $value !== '';
+                }
+            );
         }
 
-        return array_reduce($this->getTranslatableAttributes(), function ($result, $item) {
-            $result[$item] = $this->getTranslations($item);
+        return array_reduce(
+            $this->getTranslatableAttributes(), function ($result, $item) {
+                $result[$item] = $this->getTranslations($item);
 
-            return $result;
-        });
+                return $result;
+            }
+        );
     }
 
     public function setTranslation(string $key, string $locale, $value): self
@@ -246,9 +250,11 @@ trait Translatable
 
     public function forgetAllTranslations(string $locale): self
     {
-        collect($this->getTranslatableAttributes())->each(function (string $attribute) use ($locale) {
-            $this->forgetTranslation($attribute, $locale);
-        });
+        collect($this->getTranslatableAttributes())->each(
+            function (string $attribute) use ($locale) {
+                $this->forgetTranslation($attribute, $locale);
+            }
+        );
 
         return $this;
     }

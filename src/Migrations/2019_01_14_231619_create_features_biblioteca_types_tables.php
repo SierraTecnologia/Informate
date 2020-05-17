@@ -7,53 +7,63 @@ use Illuminate\Database\Migrations\Migration;
 class CreateFeaturesBibliotecaTypesTables extends Migration
 {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('biblioteca_types', function (Blueprint $table) {
-			$table->engine = 'InnoDB';
-			$table->increments('id')->unsigned();
-			$table->string('name', 255);
-			$table->text('description')->nullable();
-			$table->timestamps();
-            $table->softDeletes();
-		});
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create(
+            'biblioteca_types', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->increments('id')->unsigned();
+                $table->string('name', 255);
+                $table->text('description')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
 
-		BibliotecaType::create([
-			'id' => 1,
-			'name' => 'Portal',
-		]);
+        BibliotecaType::create(
+            [
+            'id' => 1,
+            'name' => 'Portal',
+            ]
+        );
 
-		BibliotecaType::create([
-			'id' => 2,
-			'name' => 'Aplicativo',
-		]);
+        BibliotecaType::create(
+            [
+            'id' => 2,
+            'name' => 'Aplicativo',
+            ]
+        );
 
-		BibliotecaType::create([
-			'id' => 3,
-			'name' => 'Livro',
-		]);
+        BibliotecaType::create(
+            [
+            'id' => 3,
+            'name' => 'Livro',
+            ]
+        );
 
-		BibliotecaType::create([
-			'id' => 4,
-			'name' => 'Filmes',
-		]);
-	}
+        BibliotecaType::create(
+            [
+            'id' => 4,
+            'name' => 'Filmes',
+            ]
+        );
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::dropIfExists('acessorios');
-		Schema::dropIfExists('equipaments');
-		Schema::dropIfExists('vehicle_types');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('acessorios');
+        Schema::dropIfExists('equipaments');
+        Schema::dropIfExists('vehicle_types');
+    }
 
 }

@@ -13,7 +13,7 @@ class Setting extends Base
 {
     use EloquentGetTableNameTrait;
     
-	// const CREATED_AT = 'data';
+    // const CREATED_AT = 'data';
     // const UPDATED_AT = 'dataModificacao';
 
     protected $table = 'settings';
