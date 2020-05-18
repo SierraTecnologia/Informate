@@ -19,14 +19,13 @@ class Caracteristica extends Base
      * @var array
      */
     protected $fillable = [
-        'name',
         'code',
+        'name',
+        'description',
+        'status',
     ];
 
     protected $mappingProperties = array(
-        /**
-         * User Info
-         */
         'name' => [
             'type' => 'string',
             "analyzer" => "standard",
