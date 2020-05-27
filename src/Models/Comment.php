@@ -21,6 +21,7 @@ use Finder\Models\Reference;
  */
 class Comment extends Base
 {
+    public static $classeBuilder = CommentBuilder::class;
     /**
      * @inheritdoc
      */

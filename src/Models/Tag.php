@@ -14,6 +14,7 @@ use Informate\Traits\Translatable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
 use Facilitador\Models\Post;
+use Support\Models\SortableTrait;
 
 /**
  * Class Tag.
@@ -25,12 +26,13 @@ use Facilitador\Models\Post;
  */
 class Tag extends Base implements Sortable
 {
-    use Translatable, HasSlug;
+    use Translatable, HasSlug, SortableTrait;
 
     public $translatable = ['name', 'code'];
 
     public $guarded = [];
 
+    public static $classeBuilder = TagBuilder::class;
     
     /**
      * @inheritdoc
