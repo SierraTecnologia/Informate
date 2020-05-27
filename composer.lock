@@ -740,30 +740,6 @@
         },
         {
             "name": "doctrine/common",
-<<<<<<< HEAD
-            "version": "2.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/common.git",
-                "reference": "308728eae8d90412d850c155d40b1cfbede549da"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/308728eae8d90412d850c155d40b1cfbede549da",
-                "reference": "308728eae8d90412d850c155d40b1cfbede549da",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "^1.0",
-                "doctrine/cache": "^1.0",
-                "doctrine/collections": "^1.0",
-                "doctrine/event-manager": "^1.0",
-                "doctrine/inflector": "^1.0",
-                "doctrine/lexer": "^1.0",
-                "doctrine/persistence": "^1.3.3",
-                "doctrine/reflection": "^1.0",
-                "php": "^7.1"
-=======
             "version": "3.0.0",
             "source": {
                 "type": "git",
@@ -779,7 +755,6 @@
             "require": {
                 "doctrine/persistence": "^2.0",
                 "php": "^7.1 || ^8.0"
->>>>>>> v10.0
             },
             "require-dev": {
                 "doctrine/coding-standard": "^1.0",
@@ -837,11 +812,7 @@
                 "doctrine",
                 "php"
             ],
-<<<<<<< HEAD
-            "time": "2020-05-15T05:51:54+00:00"
-=======
             "time": "2020-05-25T20:38:25+00:00"
->>>>>>> v10.0
         },
         {
             "name": "doctrine/dbal",
@@ -2791,18 +2762,6 @@
         },
         {
             "name": "opis/closure",
-<<<<<<< HEAD
-            "version": "3.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/opis/closure.git",
-                "reference": "2e3299cea6f485ca64d19c540f46d7896c512ace"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/2e3299cea6f485ca64d19c540f46d7896c512ace",
-                "reference": "2e3299cea6f485ca64d19c540f46d7896c512ace",
-=======
             "version": "3.5.3",
             "source": {
                 "type": "git",
@@ -2813,7 +2772,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/opis/closure/zipball/cac47092144043d5d676e2e7cf8d0d2f83fc89ca",
                 "reference": "cac47092144043d5d676e2e7cf8d0d2f83fc89ca",
->>>>>>> v10.0
                 "shasum": ""
             },
             "require": {
@@ -2861,11 +2819,7 @@
                 "serialization",
                 "serialize"
             ],
-<<<<<<< HEAD
-            "time": "2020-05-21T20:09:36+00:00"
-=======
             "time": "2020-05-25T09:32:45+00:00"
->>>>>>> v10.0
         },
         {
             "name": "paragonie/random_compat",
@@ -3698,21 +3652,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SierraTecnologia/laravel-support.git",
-<<<<<<< HEAD
-                "reference": "a409579474bc1e4747769e34f93d133baeb00200"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/a409579474bc1e4747769e34f93d133baeb00200",
-                "reference": "a409579474bc1e4747769e34f93d133baeb00200",
-=======
                 "reference": "fde7fdf465f3abe30b68041a9a4c9c329ed7c8a4"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/SierraTecnologia/laravel-support/zipball/fde7fdf465f3abe30b68041a9a4c9c329ed7c8a4",
                 "reference": "fde7fdf465f3abe30b68041a9a4c9c329ed7c8a4",
->>>>>>> v10.0
                 "shasum": ""
             },
             "require": {
@@ -3797,11 +3742,7 @@
                 "trait",
                 "validator"
             ],
-<<<<<<< HEAD
-            "time": "2020-05-22T23:47:24+00:00"
-=======
             "time": "2020-05-23T09:07:58+00:00"
->>>>>>> v10.0
         },
         {
             "name": "spatie/eloquent-sortable",
