@@ -3,15 +3,14 @@
 namespace Informate\Models;
 
 use Support\Models\Base as BaseModel;
-use App\Services\Normalizer;
+use Facilitador\Services\Normalizer;
 use Informate\Traits\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-// use Informate\TraitsBusinessTrait;
 use Informate\Models\System\Archive;
 
 class Event extends BaseModel
 {
-    use Translatable, SoftDeletes; //, BusinessTrait;
+    use Translatable, SoftDeletes;
 
     public $table = 'events';
 
