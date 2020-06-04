@@ -18,7 +18,7 @@ class Event extends BaseModel
 
     protected $guarded = [];
 
-    public $rules = [
+    public static $rules = [
         'title' => 'required',
     ];
 

@@ -122,29 +122,29 @@ class Comment extends Base
     // @todo fazer
     public static function registerCommentForProject($comment, $projectUrl = false)
     {
-        // $comment =  self::firstOrCreate([
-        //     'name' => $comment->name
-        // ]);
+        $comment =  self::firstOrCreate([
+            'content' => $comment->name,
+        ]);
 
-        // if ($projectUrl) {
-        //     if (!$reference = Reference::where([
-        //         'code' => $projectUrl
-        //     ])->first()) {
-        //         $reference = Reference::create([
-        //             'code' => $projectUrl,
-        //             'name' => $projectUrl,
-        //         ]);
-        //     }
-        //     if (!$comment->references()->where('reference_id', $reference->id)->first()) {
-        //         $comment->references()->save(
-        //             $reference,
-        //             [
-        //                 'identify' => $comment->id,
-        //             ]
-        //         );
-        //     }
-        // }
-        // return $comment;
+        if ($projectUrl) {
+            if (!$reference = Reference::where([
+                'code' => $projectUrl
+            ])->first()) {
+                $reference = Reference::create([
+                    'code' => $projectUrl,
+                    'name' => $projectUrl,
+                ]);
+            }
+            if (!$comment->references()->where('reference_id', $reference->id)->first()) {
+                $comment->references()->save(
+                    $reference,
+                    [
+                        'identify' => $comment->id,
+                    ]
+                );
+            }
+        }
+        return $comment;
 
         // foreach($comments as $comment) {
         //     var_dump($comment);
@@ -157,6 +157,16 @@ class Comment extends Base
     public function references()
     {
         return $this->morphToMany(Reference::class, 'referenceable');
+    }
+    
+    public static function registerComents($data, $reference)
+    {
+        if ($data->total<=0) {
+            return false;
+        }
+        dd(
+            $data
+        );
     }
     
 }

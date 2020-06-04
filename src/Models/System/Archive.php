@@ -17,5 +17,5 @@ class Archive extends ArchiveTrait
         'entity_data',
     ];
 
-    public $rules = [];
+    public static $rules = [];
 }

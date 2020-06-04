@@ -21,7 +21,7 @@ class Taste extends Base
         'name',
     ];
 
-    public $rules = [
+    public static $rules = [
         'name' => 'required|unique:tastes'
     ];
 }
