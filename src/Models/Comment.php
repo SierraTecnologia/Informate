@@ -8,14 +8,14 @@ use Population\Manipule\Entities\CommentEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
 use Facilitador\Models\Post;
-
+use Carbon\Carbon;
 use Finder\Models\Reference;
 
 /**
  * Class Comment.
  *
  * @property int id
- * @property string value
+ * @property string content
  * @property Collection posts
  * @package  App\Models
  */
@@ -31,7 +31,8 @@ class Comment extends Base
      * @inheritdoc
      */
     protected $fillable = [
-        'value',
+        'commentable_id',
+        'commentable_type',
         'content',
     ];
 
@@ -94,14 +95,14 @@ class Comment extends Base
     // }
 
     /**
-     * Setter for the 'value' attribute.
+     * Setter for the 'content' attribute.
      *
-     * @param  string $value
+     * @param  string $content
      * @return $this
      */
-    public function setValueAttribute(string $value)
+    public function setContentAttribute(string $content)
     {
-        $this->attributes['value'] = trim(str_replace(' ', '_', strtolower($value)));
+        $this->attributes['content'] = trim(str_replace(' ', '_', strtolower($content)));
 
         return $this;
     }
@@ -114,16 +115,20 @@ class Comment extends Base
         return new CommentEntity(
             [
             'id' => $this->id,
-            'value' => $this->value,
+            'content' => $this->content,
             ]
         );
     }
     
     // @todo fazer
-    public static function registerCommentForProject($comment, $projectUrl = false)
+    public static function registerCommentForProject($comment, $id, $type, $projectUrl = false)
     {
         $comment =  self::firstOrCreate([
-            'content' => $comment->name,
+            'content' => $comment->body,
+            'commentable_id' => $id,
+            'commentable_type' => $type,
+            'created_at' => $comment->created,
+            'updated_at' => $comment->updated
         ]);
 
         if ($projectUrl) {
@@ -159,14 +164,15 @@ class Comment extends Base
         return $this->morphToMany(Reference::class, 'referenceable');
     }
     
-    public static function registerComents($data, $reference)
+    public static function registerComents($data, $id, $type, $reference)
     {
         if ($data->total<=0) {
             return false;
         }
-        dd(
-            $data
-        );
+
+        foreach ($data->comments as $comment) {
+            static::registerCommentForProject($comment, $id, $type, $reference);
+        }
     }
     
 }
