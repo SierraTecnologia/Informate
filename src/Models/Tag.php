@@ -10,7 +10,7 @@ use Support\Models\Base;
 use Informate\Traits\HasSlug;
 
 use Support\Utils\Interfaces\Sortable;
-use Informate\Traits\Translatable;
+use RicardoSierra\Translation\Traits\HasTranslations;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
 use Facilitador\Models\Post;
@@ -26,7 +26,7 @@ use Support\Models\SortableTrait;
  */
 class Tag extends Base implements Sortable
 {
-    use Translatable, HasSlug, SortableTrait;
+    use HasTranslations, HasSlug, SortableTrait;
 
     public $translatable = ['name', 'code'];
 
