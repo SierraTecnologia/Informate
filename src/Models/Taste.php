@@ -24,4 +24,12 @@ class Taste extends Base
     public static $rules = [
         'name' => 'required|unique:tastes'
     ];
+
+    /**
+     * Get the owning tasteable model.
+     */
+    public function tasteable()
+    {
+        return $this->morphTo();
+    }
 }
