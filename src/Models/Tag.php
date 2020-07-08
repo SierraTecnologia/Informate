@@ -10,7 +10,7 @@ use Support\Models\Base;
 use Informate\Traits\HasSlug;
 
 use Support\Utils\Interfaces\Sortable;
-use RicardoSierra\Translation\Traits\HasTranslations;
+use Translation\Traits\HasTranslations;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
 use Facilitador\Models\Post;
