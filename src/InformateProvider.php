@@ -9,6 +9,14 @@ use Illuminate\Support\Collection;
 
 class InformateProvider extends ServiceProvider
 {
+    public static $menuItens = [
+
+    ];
+
+    public static $aliasProviders = [
+
+    ];
+    
     public static $providers = [
         
     ];
