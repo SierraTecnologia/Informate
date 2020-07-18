@@ -7,7 +7,7 @@ use App\Contants\Tables;
 use Population\Manipule\Entities\TagEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
-use Informate\Traits\HasSlug;
+use Support\Traits\Models\HasSlug;
 
 use Support\Utils\Interfaces\Sortable;
 use Translation\Traits\HasTranslations;
