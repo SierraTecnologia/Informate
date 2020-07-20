@@ -58,7 +58,7 @@ class Gosto extends Base
      */
     public function businesses()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Population\Models\Identity\Actors\Business::class), 'gostoable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Telefonica\Models\Actors\Business::class), 'gostoable');
     }
 
     /**
@@ -66,7 +66,7 @@ class Gosto extends Base
      */
     public function persons()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Population\Models\Identity\Actors\Person::class), 'gostoable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'gostoable');
     }
 
     /**

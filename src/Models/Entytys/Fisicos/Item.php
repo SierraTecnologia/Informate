@@ -41,7 +41,7 @@ class Item extends Base
      */
     public function businesses()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Population\Models\Identity\Actors\Business::class), 'itemable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Telefonica\Models\Actors\Business::class), 'itemable');
     }
 
     /**

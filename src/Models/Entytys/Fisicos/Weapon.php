@@ -3,7 +3,7 @@
 namespace Informate\Models\Entytys\Fisicos;
 
 use Support\Models\Base;
-use Population\Traits\AsFofocavel;
+use Telefonica\Traits\AsFofocavel;
 
 class Weapon extends Base
 {
@@ -40,7 +40,7 @@ class Weapon extends Base
      */
     public function persons()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Population\Models\Identity\Actors\Person::class), 'equipamentable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'equipamentable');
     }
 
     /**

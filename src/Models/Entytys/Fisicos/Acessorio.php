@@ -31,7 +31,7 @@ class Acessorio extends Base
      */
     public function persons()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Population\Models\Identity\Actors\Person::class), 'acessorioable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'acessorioable');
     }
 
     /**
