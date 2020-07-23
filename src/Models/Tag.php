@@ -7,9 +7,9 @@ use App\Contants\Tables;
 use Population\Manipule\Entities\TagEntity;
 use Illuminate\Database\Eloquent\Collection;
 use Support\Models\Base;
-use Support\Traits\Models\HasSlug;
+use Muleta\Traits\Models\HasSlug;
 
-use Support\Utils\Interfaces\Sortable;
+use Muleta\Utils\Interfaces\Sortable;
 use Translation\Traits\HasTranslations;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
