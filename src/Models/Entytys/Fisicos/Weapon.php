@@ -64,7 +64,7 @@ class Weapon extends Base
      */
     public function comments()
     {
-        return $this->morphMany('Informate\Models\Comment', 'commentable');
+        return $this->morphMany('Transmissor\Models\Comment', 'commentable');
     }
     
     /**
