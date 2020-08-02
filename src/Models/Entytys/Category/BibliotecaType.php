@@ -6,6 +6,11 @@ use Support\Models\Base;
 
 class BibliotecaType extends Base
 {
+	public $rules = [
+		'name'   => 'required',
+		// 'slug'    => 'required|unique:posts,slug',
+		// 'content' => 'required'
+	];
 
     /**
      * The attributes that are mass assignable.

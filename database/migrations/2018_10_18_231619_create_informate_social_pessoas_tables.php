@@ -51,6 +51,17 @@ class CreateInformateSocialPessoasTables extends Migration
                 $table->softDeletes();
             }
         );
+        Schema::create(
+            'itemables', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->integer('item_id')->unsigned();
+                $table->string('itemable_id');
+                $table->string('itemable_type', 255);
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
+        
         
     }
 
