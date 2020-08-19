@@ -12,30 +12,24 @@ class CreateTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create(
-            'tags', function (Blueprint $table) {
-                $table->engine = 'InnoDB';
-                $table->increments('id')->unsigned();
-                $table->string('name', 255)->nullable();
-                $table->string('text')->default('');
-                $table->timestamps();
-                $table->softDeletes();
-            }
-        );
-        
-        Schema::create(
-            'tagables', function (Blueprint $table) {
-                $table->engine = 'InnoDB';
-                $table->increments('id')->unsigned();
-                $table->string('tagable_id')->nullable();
-                $table->string('tagable_type', 255)->nullable();
+		Schema::create('tags', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('code')->nullable();
+            $table->string('type')->nullable();
+            $table->integer('order_column')->nullable();
+            $table->timestamps();
+        });
 
-                $table->integer('tag_id')->nullable();
-                // $table->foreign('tag_id')->references('id')->on('tags');
-                $table->timestamps();
-                $table->softDeletes();
-            }
-        );
+        Schema::create('taggables', function (Blueprint $table) {
+            $table->integer('tag_id')->unsigned();
+            $table->integer('taggable_id')->unsigned();
+            $table->string('taggable_type');
+
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+        });
+
 
     }
 

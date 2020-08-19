@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
 use Facilitador\Models\Post;
 use Support\Models\SortableTrait;
+use Watson\Validating\ValidatingTrait;
 
 /**
  * Class Tag.
@@ -26,6 +27,7 @@ use Support\Models\SortableTrait;
  */
 class Tag extends Base implements Sortable
 {
+	use ValidatingTrait;
     use HasTranslations, HasSlug, SortableTrait;
 
     public $translatable = ['name', 'code'];
