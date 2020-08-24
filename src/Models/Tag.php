@@ -13,7 +13,7 @@ use Muleta\Utils\Interfaces\Sortable;
 use Translation\Traits\HasTranslations;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
-use Facilitador\Models\Post;
+use Siravel\Models\Blog\Post;
 use Support\Models\SortableTrait;
 use Watson\Validating\ValidatingTrait;
 
