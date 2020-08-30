@@ -2,19 +2,19 @@
 
 namespace Informate\Models;
 
-use Population\Manipule\Builders\TagBuilder;
 use App\Contants\Tables;
-use Population\Manipule\Entities\TagEntity;
-use Illuminate\Database\Eloquent\Collection;
-use Support\Models\Base;
-use Muleta\Traits\Models\HasSlug;
-
-use Muleta\Utils\Interfaces\Sortable;
-use Translation\Traits\HasTranslations;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DbCollection;
+use Illuminate\Database\Eloquent\Collection;
+use Muleta\Traits\Models\HasSlug;
+use Muleta\Utils\Interfaces\Sortable;
+
+use Population\Manipule\Builders\TagBuilder;
+use Population\Manipule\Entities\TagEntity;
 use Siravel\Models\Blog\Post;
+use Support\Models\Base;
 use Support\Models\SortableTrait;
+use Translation\Traits\HasTranslations;
 use Watson\Validating\ValidatingTrait;
 
 /**
