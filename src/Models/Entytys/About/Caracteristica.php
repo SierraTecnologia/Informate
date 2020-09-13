@@ -25,12 +25,6 @@ class Caracteristica extends Base
         'status',
     ];
 
-    protected $mappingProperties = array(
-        'name' => [
-            'type' => 'string',
-            "analyzer" => "standard",
-        ],
-    );
     public $formFields = [
         [
             'name' => 'code',
