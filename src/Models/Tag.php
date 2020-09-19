@@ -27,7 +27,7 @@ use Watson\Validating\ValidatingTrait;
  */
 class Tag extends Base implements Sortable
 {
-	use ValidatingTrait;
+    use ValidatingTrait;
     use HasTranslations, HasSlug, SortableTrait;
 
     public $translatable = ['name', 'code'];
