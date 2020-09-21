@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Entytys\Category;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class VehicleType extends Base
 {

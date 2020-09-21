@@ -6,7 +6,7 @@
 namespace Informate\Models;
 
 use App\Models\User;
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class Taste extends Base
 {

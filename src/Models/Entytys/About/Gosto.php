@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Entytys\About;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class Gosto extends Base
 {

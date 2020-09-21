@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Ciencia\Padroes;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class Medida extends Base
 {

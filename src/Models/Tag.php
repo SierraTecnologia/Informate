@@ -12,7 +12,7 @@ use Muleta\Utils\Interfaces\Sortable;
 use Population\Manipule\Builders\TagBuilder;
 use Population\Manipule\Entities\TagEntity;
 use Siravel\Models\Blog\Post;
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 use Support\Models\SortableTrait;
 use Translation\Traits\HasTranslations;
 use Watson\Validating\ValidatingTrait;

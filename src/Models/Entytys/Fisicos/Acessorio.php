@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Entytys\Fisicos;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class Acessorio extends Base
 {

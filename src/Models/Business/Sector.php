@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Business;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class Sector extends Base
 {

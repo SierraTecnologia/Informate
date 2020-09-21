@@ -2,7 +2,7 @@
 
 namespace Informate\Models\Entytys\Fisicos;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 
 class Equipament extends Base
 {
