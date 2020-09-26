@@ -9,22 +9,33 @@ use Illuminate\Support\Collection;
 
 class InformateProvider extends ServiceProvider
 {
-    public static $menuItens = [
+    /**
+     * @var array
+     */
+    public static array $menuItens = [
 
     ];
 
-    public static $aliasProviders = [
+    /**
+     * @var array
+     */
+    public static array $aliasProviders = [
 
     ];
     
-    public static $providers = [
+    /**
+     * @var array
+     */
+    public static array $providers = [
         
     ];
 
     /**
      * Alias the services in the boot.
+     *
+     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         // $this->publishes([
         //     __DIR__.'/Publishes/resources/tools' => base_path('resources/tools'),
@@ -72,7 +83,7 @@ class InformateProvider extends ServiceProvider
         $this->commands([]);
     }
 
-    private function setProviders()
+    private function setProviders(): void
     {
         (new Collection(self::$providers))->map(
             function ($provider) {

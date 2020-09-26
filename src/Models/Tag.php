@@ -30,21 +30,38 @@ class Tag extends Base implements Sortable
     use ValidatingTrait;
     use HasTranslations, HasSlug, SortableTrait;
 
-    public $translatable = ['name', 'code'];
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string, 1: string}
+     */
+    public array $translatable = ['name', 'code'];
 
-    public $guarded = [];
+    /**
+     * @var array
+     */
+    public array $guarded = [];
 
-    public static $classeBuilder = TagBuilder::class;
+    /**
+     * @var TagBuilder::class
+     */
+    public static string $classeBuilder = TagBuilder::class;
     
     /**
      * @inheritdoc
+     *
+     * @var false
      */
-    public $timestamps = false;
+    public bool $timestamps = false;
 
     /**
      * @inheritdoc
+     *
+     * @var string[]
+     *
+     * @psalm-var array{0: string}
      */
-    protected $fillable = [
+    protected array $fillable = [
         'value',
     ];
 
@@ -72,8 +89,10 @@ class Tag extends Base implements Sortable
 
     /**
      * @inheritdoc
+     *
+     * @return Builder
      */
-    public function newQuery(): TagBuilder
+    public function newQuery(): Builder
     {
         return parent::newQuery();
     }
@@ -158,7 +177,7 @@ class Tag extends Base implements Sortable
         return static::withType($type)->ordered()->get();
     }
 
-    public static function findFromString(string $name, string $type = null, string $locale = null)
+    public static function findFromString(string $name, string $type = null, string $locale = null): ?object
     {
         $locale = $locale ?? app()->getLocale();
 
@@ -168,7 +187,7 @@ class Tag extends Base implements Sortable
             ->first();
     }
 
-    public static function findFromStringOfAnyType(string $name, string $locale = null)
+    public static function findFromStringOfAnyType(string $name, string $locale = null): ?object
     {
         $locale = $locale ?? app()->getLocale();
 

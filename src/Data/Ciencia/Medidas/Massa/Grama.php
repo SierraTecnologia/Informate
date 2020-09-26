@@ -6,10 +6,14 @@ use Informate\Data\DataObject;
 
 class Grama extends DataObject
 {
-    public static $code = 'grama';
-    public static $name = 'Grama';
-    public static $model = \Informate\Models\Ciencia\Padroes\Medida::class;
+    public static string $code = 'grama';
+    public static string $name = 'Grama';
 
-    public static $wiki = 'Grama';
+    /**
+     * @var \Informate\Models\Ciencia\Padroes\Medida::class
+     */
+    public static string $model = \Informate\Models\Ciencia\Padroes\Medida::class;
+
+    public static string $wiki = 'Grama';
 
 }

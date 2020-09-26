@@ -10,25 +10,40 @@ use Pedreiro\Models\Base;
 
 class Taste extends Base
 {
-    public $table = "tastes";
+    public string $table = "tastes";
 
-    public $primaryKey = "id";
+    public string $primaryKey = "id";
 
-    public $timestamps = true;
+    /**
+     * @var true
+     */
+    public bool $timestamps = true;
 
-    public $fillable = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string, 1: string}
+     */
+    public array $fillable = [
         'user_id',
         'name',
     ];
 
-    public $rules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $rules = [
         'name' => 'required|unique:tastes'
     ];
 
     /**
      * Get the owning tasteable model.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function tasteable()
+    public function tasteable(): \Illuminate\Database\Eloquent\Relations\MorphTo
     {
         return $this->morphTo();
     }

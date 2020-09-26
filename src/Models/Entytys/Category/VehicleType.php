@@ -19,7 +19,12 @@ class VehicleType extends Base
         'role_id'
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}, cpf: array{type: string, analyzer: string}, email: array{type: string, analyzer: string}, role_id: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         /**
          * User Info
          */

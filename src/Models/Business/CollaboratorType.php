@@ -12,9 +12,12 @@ use Pedreiro\Models\Base;
 class CollaboratorType extends Base
 {
 
-    protected $organizationPerspective = false;
+    /**
+     * @var false
+     */
+    protected bool $organizationPerspective = false;
 
-    protected $table = 'business_collaborator_types';       
+    protected string $table = 'business_collaborator_types';       
 
     /**
      * The attributes that are mass assignable.
@@ -28,7 +31,12 @@ class CollaboratorType extends Base
     ];
 
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{customer_id: array{type: string, analyzer: string}, credit_card_id: array{type: string, analyzer: string}, user_id: array{type: string, analyzer: string}, score: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
 
         'customer_id' => [
             'type' => 'integer',
@@ -49,7 +57,7 @@ class CollaboratorType extends Base
     );
 
 
-    public function user()
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'user_id', 'id');
     }

@@ -17,7 +17,12 @@ class RelationType extends Base
         'relation_type_id'
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}, relation_type_id: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         /**
          * User Info
          */
@@ -33,16 +38,20 @@ class RelationType extends Base
     
     /**
      * Get all of the relations that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function relations()
+    public function relations(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany('Population\Models\Market\Relations\Relation');
     }
     
     /**
      * Get all of the slaves that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function persons()
+    public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'personable');
     }

@@ -19,7 +19,13 @@ class Gender extends Base
     protected $fillable = [
         'name',
     ];
-    public $formFields = [
+
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{0: array{name: string, label: string, type: string}, 1: array{name: string, label: string, type: string}, 2: array{name: string, label: string, type: string, relationship: string}}
+     */
+    public array $formFields = [
         [
             'name' => 'code',
             'label' => 'code',
@@ -45,26 +51,51 @@ class Gender extends Base
         // ['name' => 'category_id', 'label' => 'Category', 'type' => 'select', 'relationship' => 'category'],
     ];
 
-    public $indexFields = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string}
+     */
+    public array $indexFields = [
         'name',
     ];
 
-    public $validationRules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $validationRules = [
         'name'       => 'required|max:255',
         // 'publish_on'  => 'date',
         // 'published'   => 'boolean',
         // 'category_id' => 'required|int',
     ];
 
-    public $validationMessages = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{'name.required': string}
+     */
+    public array $validationMessages = [
         'name.required' => "Nome é obrigatório."
     ];
 
-    public $validationAttributes = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $validationAttributes = [
         'name' => 'Name'
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         /**
          * User Info
          */
@@ -76,16 +107,20 @@ class Gender extends Base
     
     /**
      * Get all of the slaves that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function persons()
+    public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'genderable');
     }
 
     /**
      * Get all of the users that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function users()
+    public function users(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'genderable');
     }

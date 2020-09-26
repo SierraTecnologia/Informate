@@ -6,9 +6,12 @@ use Pedreiro\Models\Base;
 
 class Sector extends Base
 {
-    protected $organizationPerspective = false;
+    /**
+     * @var false
+     */
+    protected bool $organizationPerspective = false;
 
-    protected $table = 'business_sectors';
+    protected string $table = 'business_sectors';
 
     /**
      * The attributes that are mass assignable.
@@ -24,7 +27,12 @@ class Sector extends Base
     ];
 
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{user_id: array{type: string, analyzer: string}, name: array{type: string, analyzer: string}, slug: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
 
         'user_id' => [
             'type' => 'integer',
@@ -41,7 +49,12 @@ class Sector extends Base
     );
 
     
-    public $formFields = [
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{0: array{name: string, label: string, type: string}, 1: array{name: string, label: string, type: string}, 2: array{name: string, label: string, type: string}, 3: array{name: string, label: string, type: string}}
+     */
+    public array $formFields = [
         [
             'name' => 'name',
             'label' => 'name',
@@ -72,14 +85,24 @@ class Sector extends Base
         // ['name' => 'tags', 'label' => 'Tags', 'type' => 'select_multiple', 'relationship' => 'tags'],
     ];
 
-    public $indexFields = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string, 1: string, 2: string, 3: string}
+     */
+    public array $indexFields = [
         'name',
         'description',
         'slug',
         'status'
     ];
 
-    public $validationRules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string, description: string, slug: string, status: string}
+     */
+    public array $validationRules = [
         'name'       => 'required|max:255',
         'description'        => 'required|max:100',
         'slug'        => 'required|max:100',
@@ -89,15 +112,25 @@ class Sector extends Base
         // 'category_id' => 'required|int',
     ];
 
-    public $validationMessages = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{'name.required': string}
+     */
+    public array $validationMessages = [
         'name.required' => "Nome é obrigatório."
     ];
 
-    public $validationAttributes = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $validationAttributes = [
         'name' => 'Name'
     ];
     
-    public function user()
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'user_id', 'id');
     }

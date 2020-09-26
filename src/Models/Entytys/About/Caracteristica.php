@@ -6,12 +6,21 @@ use Pedreiro\Models\Base;
 
 class Caracteristica extends Base
 {
-    public $incrementing = false;
-    protected $casts = [
+    /**
+     * @var false
+     */
+    public bool $incrementing = false;
+
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{code: string}
+     */
+    protected array $casts = [
         'code' => 'string',
     ];
-    protected $primaryKey = 'code';
-    protected $keyType = 'string';
+    protected string $primaryKey = 'code';
+    protected string $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -25,7 +34,12 @@ class Caracteristica extends Base
         'status',
     ];
 
-    public $formFields = [
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{0: array{name: string, label: string, type: string}, 1: array{name: string, label: string, type: string}, 2: array{name: string, label: string, type: string}, 3: array{name: string, label: string, type: string}, 4: array{name: string, label: string, type: string, relationship: string}}
+     */
+    public array $formFields = [
         [
             'name' => 'code',
             'label' => 'code',
@@ -61,13 +75,23 @@ class Caracteristica extends Base
         // ['name' => 'category_id', 'label' => 'Category', 'type' => 'select', 'relationship' => 'category'],
     ];
 
-    public $indexFields = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string, 1: string, 2: string}
+     */
+    public array $indexFields = [
         'name',
         'description',
         'status'
     ];
 
-    public $validationRules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string, description: string, status: string}
+     */
+    public array $validationRules = [
         'name'       => 'required|max:255',
         'description'        => 'required|max:100',
         'status'        => 'boolean',
@@ -76,15 +100,30 @@ class Caracteristica extends Base
         // 'category_id' => 'required|int',
     ];
 
-    public $validationMessages = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{'name.required': string}
+     */
+    public array $validationMessages = [
         'name.required' => "Nome é obrigatório."
     ];
 
-    public $validationAttributes = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $validationAttributes = [
         'name' => 'Name'
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}, description: array{type: string, analyzer: string}, code: array{type: string, analyzer: string}, status: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
 
         'name' => [
             'type' => 'integer',
@@ -106,16 +145,20 @@ class Caracteristica extends Base
     
     /**
      * Get all of the slaves that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function persons()
+    public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
     }
 
     /**
      * Get all of the users that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function users()
+    public function users(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'skillable');
     }

@@ -7,16 +7,28 @@ use Pedreiro\Models\Base;
 class MedidaType extends Base
 {
 
-    protected $organizationPerspective = false;
+    /**
+     * @var false
+     */
+    protected bool $organizationPerspective = false;
 
-    protected $table = 'medida_types';
+    protected string $table = 'medida_types';
     
-    public $incrementing = false;
-    protected $casts = [
+    /**
+     * @var false
+     */
+    public bool $incrementing = false;
+
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{code: string}
+     */
+    protected array $casts = [
         'code' => 'string',
     ];
-    protected $primaryKey = 'code';
-    protected $keyType = 'string';  
+    protected string $primaryKey = 'code';
+    protected string $keyType = 'string';  
 
     /**
      * The attributes that are mass assignable.
@@ -29,7 +41,12 @@ class MedidaType extends Base
     ];
 
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}, code: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         'name' => [
             'type' => 'string',
             "analyzer" => "standard",

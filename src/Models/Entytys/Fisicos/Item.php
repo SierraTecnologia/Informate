@@ -18,7 +18,12 @@ class Item extends Base
         'item_id'
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}, description: array{type: string, analyzer: string}, item_id: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         /**
          * User Info
          */
@@ -38,24 +43,30 @@ class Item extends Base
 
     /**
      * Get all of the businesses that are assigned this item.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function businesses()
+    public function businesses(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Telefonica\Models\Actors\Business::class), 'itemable');
     }
 
     /**
      * Get all of the girls that are assigned this item.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function girls()
+    public function girls(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany('Population\Models\Market\Actors\Girl', 'itemable');
     }
 
     /**
      * Get all of the users that are assigned this item.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function users()
+    public function users(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'itemable');
     }

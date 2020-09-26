@@ -7,16 +7,28 @@ use Pedreiro\Models\Base;
 class Medida extends Base
 {
 
-    protected $organizationPerspective = false;
+    /**
+     * @var false
+     */
+    protected bool $organizationPerspective = false;
 
-    protected $table = 'medidas';
+    protected string $table = 'medidas';
     
-    public $incrementing = false;
-    protected $casts = [
+    /**
+     * @var false
+     */
+    public bool $incrementing = false;
+
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{code: string}
+     */
+    protected array $casts = [
         'code' => 'string',
     ];
-    protected $primaryKey = 'code';
-    protected $keyType = 'string';  
+    protected string $primaryKey = 'code';
+    protected string $keyType = 'string';  
 
     /**
      * The attributes that are mass assignable.
@@ -30,7 +42,12 @@ class Medida extends Base
     ];
 
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{medida_type_code: array{type: string, analyzer: string}, name: array{type: string, analyzer: string}, code: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
 
         'medida_type_code' => [
             'type' => 'string',
@@ -46,15 +63,17 @@ class Medida extends Base
         ],
     );
 
-    public function medidaType()
+    public function medidaType(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo('Informate\Models\Ciencia\Padroes\Medida', 'medida_type_code', 'code');
     }
 
     /**
      * Get all of the persons that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function persons()
+    public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'medidable');
     }

@@ -6,12 +6,21 @@ use Pedreiro\Models\Base;
 
 class Gosto extends Base
 {
-    public $incrementing = false;
-    protected $casts = [
+    /**
+     * @var false
+     */
+    public bool $incrementing = false;
+
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{code: string}
+     */
+    protected array $casts = [
         'code' => 'string',
     ];
-    protected $primaryKey = 'code';
-    protected $keyType = 'string';
+    protected string $primaryKey = 'code';
+    protected string $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.
@@ -26,7 +35,12 @@ class Gosto extends Base
         'gosto_code'
     ];
 
-    public $formFields = [
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{0: array{name: string, label: string, type: string}, 1: array{name: string, label: string, type: string}, 2: array{name: string, label: string, type: string}, 3: array{name: string, label: string, type: string}}
+     */
+    public array $formFields = [
         [
             'name' => 'code',
             'label' => 'code',
@@ -62,13 +76,23 @@ class Gosto extends Base
         // ['name' => 'tags', 'label' => 'Tags', 'type' => 'select_multiple', 'relationship' => 'tags'],
     ];
 
-    public $indexFields = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string, 1: string}
+     */
+    public array $indexFields = [
         'name',
         'description',
         // 'status'
     ];
 
-    public $validationRules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string, description: string}
+     */
+    public array $validationRules = [
         'name'       => 'required|max:255',
         'description'        => 'required|max:100',
         // 'status'        => 'boolean',
@@ -77,14 +101,30 @@ class Gosto extends Base
         // 'category_id' => 'required|int',
     ];
 
-    public $validationMessages = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{'name.required': string}
+     */
+    public array $validationMessages = [
         'name.required' => "Nome é obrigatório."
     ];
 
-    public $validationAttributes = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $validationAttributes = [
         'name' => 'Name'
     ];
-    protected $mappingProperties = array(
+
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{code: array{type: string, analyzer: string}, name: array{type: string, analyzer: string}, text: array{type: string, analyzer: string}, description: array{type: string, analyzer: string}, gosto_code: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         /**
          * User Info
          */
@@ -112,24 +152,30 @@ class Gosto extends Base
 
     /**
      * Get all of the businesses that are assigned this gosto.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function businesses()
+    public function businesses(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec-tools.models.business', \Telefonica\Models\Actors\Business::class), 'gostoable');
     }
 
     /**
      * Get all of the persons that are assigned this gosto.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function persons()
+    public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'gostoable');
     }
 
     /**
      * Get all of the users that are assigned this gosto.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function users()
+    public function users(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'gostoable');
     }

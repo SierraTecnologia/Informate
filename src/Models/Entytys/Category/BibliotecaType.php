@@ -6,7 +6,12 @@ use Pedreiro\Models\Base;
 
 class BibliotecaType extends Base
 {
-    public $rules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $rules = [
     'name'   => 'required',
     // 'slug'    => 'required|unique:posts,slug',
     // 'content' => 'required'
@@ -21,7 +26,12 @@ class BibliotecaType extends Base
         'name',
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
         /**
          * User Info
          */
@@ -31,7 +41,7 @@ class BibliotecaType extends Base
         ],
     );
 
-    public function bibliotecas()
+    public function bibliotecas(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany('Population\Models\Market\Informacao\Biblioteca', 'biblioteca_type_id', 'id');
     }

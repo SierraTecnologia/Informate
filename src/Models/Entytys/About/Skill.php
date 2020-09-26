@@ -6,16 +6,28 @@ use Pedreiro\Models\Base;
 
 class Skill extends Base
 {
-    protected $organizationPerspective = false;
+    /**
+     * @var false
+     */
+    protected bool $organizationPerspective = false;
 
-    protected $table = 'skills';
+    protected string $table = 'skills';
     
-    public $incrementing = false;
-    protected $casts = [
+    /**
+     * @var false
+     */
+    public bool $incrementing = false;
+
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{code: string}
+     */
+    protected array $casts = [
         'code' => 'string',
     ];
-    protected $primaryKey = 'code';
-    protected $keyType = 'string';
+    protected string $primaryKey = 'code';
+    protected string $keyType = 'string';
 
 
     /**
@@ -32,7 +44,12 @@ class Skill extends Base
     ];
 
     
-    public $formFields = [
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{0: array{name: string, label: string, type: string}, 1: array{name: string, label: string, type: string}, 2: array{name: string, label: string, type: string}, 3: array{name: string, label: string, type: string}}
+     */
+    public array $formFields = [
         [
             'name' => 'code',
             'label' => 'code',
@@ -63,13 +80,23 @@ class Skill extends Base
         // ['name' => 'tags', 'label' => 'Tags', 'type' => 'select_multiple', 'relationship' => 'tags'],
     ];
 
-    public $indexFields = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{0: string, 1: string, 2: string}
+     */
+    public array $indexFields = [
         'name',
         'description',
         'status'
     ];
 
-    public $validationRules = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string, description: string, status: string}
+     */
+    public array $validationRules = [
         'name'       => 'required|max:255',
         'description'        => 'required|max:100',
         'status'        => 'boolean',
@@ -78,15 +105,30 @@ class Skill extends Base
         // 'category_id' => 'required|int',
     ];
 
-    public $validationMessages = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{'name.required': string}
+     */
+    public array $validationMessages = [
         'name.required' => "Nome é obrigatório."
     ];
 
-    public $validationAttributes = [
+    /**
+     * @var string[]
+     *
+     * @psalm-var array{name: string}
+     */
+    public array $validationAttributes = [
         'name' => 'Name'
     ];
 
-    protected $mappingProperties = array(
+    /**
+     * @var string[][]
+     *
+     * @psalm-var array{name: array{type: string, analyzer: string}, description: array{type: string, analyzer: string}, code: array{type: string, analyzer: string}, status: array{type: string, analyzer: string}}
+     */
+    protected array $mappingProperties = array(
 
         'name' => [
             'type' => 'integer',
@@ -108,8 +150,10 @@ class Skill extends Base
 
     /**
      * Get all of the persons that are assigned this tag.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
-    public function persons()
+    public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
     }
