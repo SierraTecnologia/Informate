@@ -10,9 +10,9 @@ use Pedreiro\Models\Base;
 
 class Taste extends Base
 {
-    public string $table = "tastes";
+    public $table = "tastes";
 
-    public string $primaryKey = "id";
+    public $primaryKey = "id";
 
     /**
      * @var true
@@ -24,7 +24,7 @@ class Taste extends Base
      *
      * @psalm-var array{0: string, 1: string}
      */
-    public array $fillable = [
+    public $fillable = [
         'user_id',
         'name',
     ];
