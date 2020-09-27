@@ -11,7 +11,7 @@ class BibliotecaType extends Base
      *
      * @psalm-var array{name: string}
      */
-    public array $rules = [
+    public $rules = [
     'name'   => 'required',
     // 'slug'    => 'required|unique:posts,slug',
     // 'content' => 'required'
