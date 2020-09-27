@@ -17,7 +17,7 @@ class Taste extends Base
     /**
      * @var true
      */
-    public bool $timestamps = true;
+    public $timestamps = true;
 
     /**
      * @var string[]
@@ -34,7 +34,7 @@ class Taste extends Base
      *
      * @psalm-var array{name: string}
      */
-    public array $rules = [
+    public $rules = [
         'name' => 'required|unique:tastes'
     ];
 

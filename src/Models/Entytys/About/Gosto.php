@@ -9,18 +9,18 @@ class Gosto extends Base
     /**
      * @var false
      */
-    public bool $incrementing = false;
+    public $incrementing = false;
 
     /**
      * @var string[]
      *
      * @psalm-var array{code: string}
      */
-    protected array $casts = [
+    protected $casts = [
         'code' => 'string',
     ];
-    protected string $primaryKey = 'code';
-    protected string $keyType = 'string';
+    protected $primaryKey = 'code';
+    protected $keyType = 'string';
 
     /**
      * The attributes that are mass assignable.

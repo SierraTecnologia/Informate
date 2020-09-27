@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\Collection;
 use Muleta\Traits\Models\HasSlug;
 use Muleta\Utils\Interfaces\Sortable;
 
+use Pedreiro\Models\Base;
 use Population\Manipule\Builders\TagBuilder;
 use Population\Manipule\Entities\TagEntity;
 use Siravel\Models\Blog\Post;
-use Pedreiro\Models\Base;
 use Support\Models\SortableTrait;
 use Translation\Traits\HasTranslations;
 use Watson\Validating\ValidatingTrait;
@@ -40,7 +40,7 @@ class Tag extends Base implements Sortable
     /**
      * @var array
      */
-    public array $guarded = [];
+    public $guarded = [];
 
     /**
      * @var TagBuilder::class
@@ -52,7 +52,7 @@ class Tag extends Base implements Sortable
      *
      * @var false
      */
-    public bool $timestamps = false;
+    public $timestamps = false;
 
     /**
      * @inheritdoc
@@ -61,7 +61,7 @@ class Tag extends Base implements Sortable
      *
      * @psalm-var array{0: string}
      */
-    protected array $fillable = [
+    protected $fillable = [
         'value',
     ];
 

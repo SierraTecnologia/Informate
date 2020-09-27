@@ -17,7 +17,7 @@ class CollaboratorType extends Base
      */
     protected bool $organizationPerspective = false;
 
-    protected string $table = 'business_collaborator_types';       
+    protected $table = 'business_collaborator_types';
 
     /**
      * The attributes that are mass assignable.
@@ -61,5 +61,4 @@ class CollaboratorType extends Base
     {
         return $this->belongsTo(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'user_id', 'id');
     }
-
 }

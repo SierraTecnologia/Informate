@@ -11,7 +11,7 @@ class Sector extends Base
      */
     protected bool $organizationPerspective = false;
 
-    protected string $table = 'business_sectors';
+    protected $table = 'business_sectors';
 
     /**
      * The attributes that are mass assignable.
