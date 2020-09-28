@@ -38,7 +38,7 @@ class Acessorio extends Base
      */
     public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'acessorioable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('application.directorys.models.persons', \Telefonica\Models\Actors\Person::class), 'acessorioable');
     }
 
     /**
@@ -48,6 +48,6 @@ class Acessorio extends Base
      */
     public function users(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.user', \App\Models\User::class), 'acessorioable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('application.directorys.models.users', \App\Models\User::class), 'acessorioable');
     }
 }

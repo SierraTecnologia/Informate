@@ -155,6 +155,6 @@ class Skill extends Base
      */
     public function persons(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('application.directorys.models.persons', \Telefonica\Models\Actors\Person::class), 'skillable');
     }
 }
