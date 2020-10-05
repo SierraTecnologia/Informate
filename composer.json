@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=7.2.0",
-        "sierratecnologia/laravel-support": "dev-master"
+        "sierratecnologia/muleta": "dev-master"
     },
     "autoload": {
         "psr-4": {
