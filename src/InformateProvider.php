@@ -38,7 +38,7 @@ class InformateProvider extends ServiceProvider
         // ]);
 
         // $this->publishes([
-        //     __DIR__.'../resources/views' => base_path('resources/views/vendor/Informate'),
+        //     __DIR__.'../resources/views' => base_path('resources'.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'Informate'),
         // ], 'SierraTecnologia Informate');
     }
 
