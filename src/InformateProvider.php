@@ -58,7 +58,7 @@ class InformateProvider extends ServiceProvider
         //     $this->app->view->addNamespace('Informate-frontend', __DIR__.'/Publishes/resources/Informate');
         // }
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'database'.DIRECTORY_SEPARATOR.'migrations');
 
         // // Configs
         // $this->app->config->set('Informate.modules.Informate', include(__DIR__.'/config.php'));
