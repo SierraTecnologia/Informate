@@ -1107,16 +1107,16 @@
         },
         {
             "name": "sierratecnologia/crypto",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SierraTecnologia/Crypto.git",
-                "reference": "1a8ccb741294fcef1ad97354f19d5a944ab251f2"
+                "reference": "0e51730ef9326005c17176bab0745720b885de7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SierraTecnologia/Crypto/zipball/1a8ccb741294fcef1ad97354f19d5a944ab251f2",
-                "reference": "1a8ccb741294fcef1ad97354f19d5a944ab251f2",
+                "url": "https://api.github.com/repos/SierraTecnologia/Crypto/zipball/0e51730ef9326005c17176bab0745720b885de7c",
+                "reference": "0e51730ef9326005c17176bab0745720b885de7c",
                 "shasum": ""
             },
             "require": {
@@ -1176,20 +1176,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-28T10:42:43+00:00"
+            "time": "2020-11-19T08:51:19+00:00"
         },
         {
             "name": "sierratecnologia/muleta",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SierraTecnologia/muleta.git",
-                "reference": "54f95f57dc178be2e282e284d6ea7be2d8dc87f6"
+                "reference": "89af7aed316c6f3ee4178a1585165130c645b052"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SierraTecnologia/muleta/zipball/54f95f57dc178be2e282e284d6ea7be2d8dc87f6",
-                "reference": "54f95f57dc178be2e282e284d6ea7be2d8dc87f6",
+                "url": "https://api.github.com/repos/SierraTecnologia/muleta/zipball/89af7aed316c6f3ee4178a1585165130c645b052",
+                "reference": "89af7aed316c6f3ee4178a1585165130c645b052",
                 "shasum": ""
             },
             "require": {
@@ -1257,7 +1257,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-28T10:43:59+00:00"
+            "time": "2020-11-19T08:55:49+00:00"
         },
         {
             "name": "symfony/console",
