@@ -13,7 +13,7 @@ use Population\Manipule\Builders\TagBuilder;
 use Population\Manipule\Entities\TagEntity;
 use Siravel\Models\Blog\Post;
 use Pedreiro\Models\Base;
-use Support\Models\SortableTrait;
+use Muleta\Traits\Models\SortableTrait;
 use Translation\Traits\HasTranslations;
 use Watson\Validating\ValidatingTrait;
 
