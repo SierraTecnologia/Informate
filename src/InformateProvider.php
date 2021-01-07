@@ -21,7 +21,17 @@ class InformateProvider extends ServiceProvider
     public static $menuItens = [
         [
             'text'        => 'Acessorios',
-            'route'       => 'rica.finder.home',
+            'route'       => 'master.informate.acessorios.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'Equipamentos',
+            'route'       => 'master.informate.equipaments.index',
             'icon'        => 'fas fa-fw fa-ship',
             'icon_color'  => 'blue',
             'label_color' => 'success',
