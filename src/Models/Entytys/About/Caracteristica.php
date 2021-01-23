@@ -23,6 +23,9 @@ class Caracteristica extends Base
         'name',
         'description',
         'status',
+        'consequencia',
+        'motivo',
+        'obs',
     ];
 
     public $formFields = [
@@ -52,11 +55,21 @@ class Caracteristica extends Base
             'type' => 'select_multiple',
             'relationship' => 'persons'
         ],
-        // [
-        //     'name' => 'status',
-        //     'label' => 'Enter your content here',
-        //     'type' => 'textarea'
-        // ],
+        [
+            'name' => 'consequencia',
+            'label' => 'consequencia',
+            'type' => 'text'
+        ],
+        [
+            'name' => 'motivo',
+            'label' => 'motivo',
+            'type' => 'text'
+        ],
+        [
+            'name' => 'obs',
+            'label' => 'Obs',
+            'type' => 'textarea'
+        ],
         // ['name' => 'publish_on', 'label' => 'Publish Date', 'type' => 'date'],
         // ['name' => 'category_id', 'label' => 'Category', 'type' => 'select', 'relationship' => 'category'],
     ];
@@ -64,7 +77,10 @@ class Caracteristica extends Base
     public $indexFields = [
         'name',
         'description',
-        'status'
+        'status',
+        'consequencia',
+        'motivo',
+        'obs',
     ];
 
     public $validationRules = [

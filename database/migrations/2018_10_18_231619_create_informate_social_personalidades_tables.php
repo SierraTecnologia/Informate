@@ -17,7 +17,7 @@ class CreateInformateSocialPersonalidadesTables extends Migration
             'tastes', function (Blueprint $table) {
                 $table->engine = 'InnoDB';
                 $table->increments('id')->unsigned();
-                $table->string('url', 255);
+                $table->string('name', 255);
                 $table->string('tasteable_id')->nullable();
                 $table->string('tasteable_type', 255)->nullable();
                 $table->timestamps();
