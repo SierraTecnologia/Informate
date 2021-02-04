@@ -1,4 +1,7 @@
 <?php
+/**
+ * Repete em Locaravel
+ */
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
