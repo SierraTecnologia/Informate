@@ -52,6 +52,10 @@ class Category extends Model
         static::creating(
             function ($model) {
 
+                if (empty($model->slug) && !empty($model->code)) {
+                    $model->slug = $model->code;
+                    unset($model->code);
+                }
                 if (empty($model->title)) {
                     $model->title = $model->slug;
                 }

@@ -26,8 +26,8 @@ class CreateCategoriesTable extends Migration
                     $table->foreign('parent_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('set null');
                     $table->integer('order')->default(1);
                     $table->string('title');
-                    $table->string('email'); // @todo acho que nao deveria ter aqui
-                    $table->string('url'); // @todo acho que nao deveria ter aqui
+                    $table->string('email')->nullable(); // @todo acho que nao deveria ter aqui
+                    $table->string('url')->nullable(); // @todo acho que nao deveria ter aqui
                     $table->string('slug')->unique();
 
                     $table->string('language_code')->nullable();
