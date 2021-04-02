@@ -128,13 +128,5 @@ class InformateProvider extends ServiceProvider
         $this->commands([]);
     }
 
-    private function setProviders()
-    {
-        (new Collection(self::$providers))->map(
-            function ($provider) {
-                $this->app->register($provider);
-            }
-        );
-    }
 
 }
