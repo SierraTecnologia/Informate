@@ -27,7 +27,8 @@ class InformateProvider extends ServiceProvider
             'label_color' => 'success',
             'section' => "master",
             'feature' => 'espolio',
-            'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
             // 'access' => \Porteiro\Models\Role::$ADMIN
         ],
         [
@@ -38,7 +39,8 @@ class InformateProvider extends ServiceProvider
             'label_color' => 'success',
             'section' => "master",
             'feature' => 'espolio',
-            'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            'order' => 1016,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
             // 'access' => \Porteiro\Models\Role::$ADMIN
         ],
     ];
