@@ -32,6 +32,18 @@ class InformateProvider extends ServiceProvider
             // 'access' => \Porteiro\Models\Role::$ADMIN
         ],
         [
+            'text'        => 'Positions',
+            'route'       => 'master.informate.positions.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'espolio',
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
             'text'        => 'Acessorios',
             'route'       => 'master.informate.acessorios.index',
             'icon'        => 'fas fa-fw fa-ship',
