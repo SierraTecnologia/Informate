@@ -1,5 +1,12 @@
 <?php
 
-Route::resource('/acessorios', 'AcessorioController')->parameters([
-    'acessorios' => 'id'
-]);
+
+if (\Muleta\Modules\Features\Resources\FeatureHelper::hasActiveFeature(
+    [
+        'espolio',
+    ]
+)){
+
+    
+}
+

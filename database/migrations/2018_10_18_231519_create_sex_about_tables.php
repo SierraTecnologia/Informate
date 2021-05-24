@@ -12,6 +12,13 @@ class CreateSexAboutTables extends Migration
      */
     public function up()
     {
+        if (!\Muleta\Modules\Features\Resources\FeatureHelper::hasActiveFeature(
+            [
+                'social-relations',
+            ]
+        )){
+            return ;
+        }
         
         Schema::create(
             'genders', function (Blueprint $table) {

@@ -32,18 +32,6 @@ class InformateProvider extends ServiceProvider
             // 'access' => \Porteiro\Models\Role::$ADMIN
         ],
         [
-            'text'        => 'Positions',
-            'route'       => 'master.informate.positions.index',
-            'icon'        => 'fas fa-fw fa-ship',
-            'icon_color'  => 'blue',
-            'label_color' => 'success',
-            'section' => "master",
-            'feature' => 'espolio',
-            'order' => 1012,
-            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
-            // 'access' => \Porteiro\Models\Role::$ADMIN
-        ],
-        [
             'text'        => 'Acessorios',
             'route'       => 'master.informate.acessorios.index',
             'icon'        => 'fas fa-fw fa-ship',
@@ -56,6 +44,18 @@ class InformateProvider extends ServiceProvider
             // 'access' => \Porteiro\Models\Role::$ADMIN
         ],
         [
+            'text'        => 'Items',
+            'route'       => 'master.informate.items.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'espolio',
+            'order' => 1016,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
             'text'        => 'Equipamentos',
             'route'       => 'master.informate.equipaments.index',
             'icon'        => 'fas fa-fw fa-ship',
@@ -64,6 +64,30 @@ class InformateProvider extends ServiceProvider
             'section' => "master",
             'feature' => 'espolio',
             'order' => 1016,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'Positions',
+            'route'       => 'master.informate.positions.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'social-relations',
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'relations',
+            'route'       => 'master.informate.relations.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'social-relations',
+            'order' => 1012,
             'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
             // 'access' => \Porteiro\Models\Role::$ADMIN
         ],
