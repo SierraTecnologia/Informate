@@ -25,7 +25,7 @@ class CreateSexAboutTables extends Migration
                 $table->engine = 'InnoDB';
                 $table->increments('id')->unsigned();
                 $table->string('name', 255)->nullable();
-                $table->string('description', 255)->nullable();
+                $table->text('description', 255)->nullable();
                 $table->integer('status')->default(1);
                 $table->unsignedInteger('gender_id')->nullable();
                 $table->timestamps();
@@ -55,7 +55,7 @@ class CreateSexAboutTables extends Migration
                 $table->engine = 'InnoDB';
                 $table->increments('id')->unsigned();
                 $table->string('name', 255)->nullable();
-                $table->string('description', 255)->nullable();
+                $table->text('description', 255)->nullable();
                 $table->integer('status')->default(1);
 
                 $table->unsignedInteger('relation_type_id')->nullable();
@@ -87,7 +87,7 @@ class CreateSexAboutTables extends Migration
                 $table->engine = 'InnoDB';
                 $table->increments('id')->unsigned();
                 $table->string('name', 255)->nullable();
-                $table->string('description', 255)->nullable();
+                $table->text('description', 255)->nullable();
                 $table->integer('status')->default(1);
                 $table->string('bottom_code');
                 $table->string('top_code');
