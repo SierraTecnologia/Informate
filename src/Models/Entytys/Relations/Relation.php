@@ -7,6 +7,13 @@ use Pedreiro\Models\Base as Model;
 
 class Relation extends Model
 {
+    public $incrementing = false;
+    protected $casts = [
+        'code' => 'string',
+    ];
+    protected $primaryKey = 'code';
+    protected $keyType = 'string';
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -14,10 +21,21 @@ class Relation extends Model
      */
     protected $fillable = [
         'name',
-        // 'code',
+        'code',
+        'status',
+        'relation_type_code',
+        'bottom_code',
+        'top_code',
+        'name_relation_to',
+        'name_relation_from'
     ];
 
     public $formFields = [
+        [
+            'name' => 'code',
+            'label' => 'code',
+            'type' => 'text'
+        ],
         [
             'name' => 'name',
             'label' => 'name',
@@ -33,16 +51,26 @@ class Relation extends Model
             'label' => 'description',
             'type' => 'text'
         ],
+        [
+            'name' => 'name_relation_to',
+            'label' => 'name_relation_to',
+            'type' => 'text'
+        ],
+        [
+            'name' => 'name_relation_from',
+            'label' => 'name_relation_from',
+            'type' => 'text'
+        ],
         // [
         //     'name' => 'slug',
         //     'label' => 'slug',
         //     'type' => 'text'
         // ],
-        // [
-        //     'name' => 'status',
-        //     'label' => 'Status',
-        //     'type' => 'checkbox'
-        // ],
+        [
+            'name' => 'status',
+            'label' => 'Status',
+            'type' => 'checkbox'
+        ],
         // [
         //     'name' => 'status',
         //     'label' => 'Enter your content here',
@@ -54,19 +82,22 @@ class Relation extends Model
     ];
 
     public $indexFields = [
+        'code',
         'name',
         'description',
+        'name_relation_to',
+        'name_relation_from',
         // 'slug',
-        // 'status'
+        'status'
     ];
 
-    /**
-     * Get the type that owns the phone.
-     */
-    public function type()
-    {
-        return $this->belongsTo(RelationType::class);
-    }
+    // /**
+    //  * Get the type that owns the phone.
+    //  */
+    // public function type()
+    // {
+    //     return $this->belongsTo(RelationType::class);
+    // }
 
     // /**
     //  * Get the rooms

@@ -85,7 +85,8 @@ class CreateSexAboutTables extends Migration
         Schema::create(
             'relations', function (Blueprint $table) {
                 $table->engine = 'InnoDB';
-                $table->increments('id')->unsigned();
+                $table->string('code')->unique();
+                $table->primary('code');
                 $table->string('name', 255)->nullable();
                 $table->text('description', 255)->nullable();
                 $table->integer('status')->default(1);
