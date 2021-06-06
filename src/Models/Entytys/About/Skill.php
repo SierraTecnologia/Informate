@@ -113,4 +113,13 @@ class Skill extends Base
     {
         return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
     }
+
+    /**
+     * Get all of the videos that are assigned this tag.
+     */
+    public function videos()
+    {
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.video', \MediaManager\Models\Video::class), 'skillable')
+            ->withPivot('valor');
+    }
 }

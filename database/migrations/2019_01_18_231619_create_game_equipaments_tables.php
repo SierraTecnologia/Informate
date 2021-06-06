@@ -12,6 +12,36 @@ class CreateGameEquipamentsTables extends Migration
      */
     public function up()
     {
+        if (!\Muleta\Modules\Features\Resources\FeatureHelper::hasActiveFeature(
+            [
+                'espolio',
+            ]
+        )){
+            return ;
+        }
+        
+        
+        Schema::create(
+            'items', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->increments('id')->unsigned();
+                $table->string('name', 255);
+                $table->string('description', 255);
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
+        Schema::create(
+            'itemables', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->integer('item_id')->unsigned();
+                $table->string('itemable_id');
+                $table->string('itemable_type', 255);
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
+        
         Schema::create(
             'equipaments', function (Blueprint $table) {
                 $table->engine = 'InnoDB';

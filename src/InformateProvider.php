@@ -7,10 +7,90 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Collection;
 
+use Log;
+use Muleta\Traits\Providers\ConsoleTools;
+use Route;
+
 class InformateProvider extends ServiceProvider
 {
-    public static $menuItens = [
+    use ConsoleTools;
 
+    public $packageName = 'informate';
+    const pathVendor = 'sierratecnologia/informate';
+
+    public static $menuItens = [
+        [
+            'text'        => 'Skills',
+            'route'       => 'master.informate.skills.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'espolio',
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'Acessorios',
+            'route'       => 'master.informate.acessorios.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'espolio',
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'Items',
+            'route'       => 'master.informate.items.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'espolio',
+            'order' => 1016,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'Equipamentos',
+            'route'       => 'master.informate.equipaments.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'espolio',
+            'order' => 1016,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'Positions',
+            'route'       => 'master.informate.positions.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'social-relations',
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
+        [
+            'text'        => 'relations',
+            'route'       => 'master.informate.relations.index',
+            'icon'        => 'fas fa-fw fa-ship',
+            'icon_color'  => 'blue',
+            'label_color' => 'success',
+            'section' => "master",
+            'feature' => 'social-relations',
+            'order' => 1012,
+            'level'       => 2, // 0 (Public), 1, 2 (Admin) , 3 (Root)
+            // 'access' => \Porteiro\Models\Role::$ADMIN
+        ],
     ];
 
     public static $aliasProviders = [
@@ -40,6 +120,32 @@ class InformateProvider extends ServiceProvider
         // $this->publishes([
         //     __DIR__.'../resources/views' => base_path('resources'.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'Informate'),
         // ], 'SierraTecnologia Informate');
+
+
+        
+        $this->app->booted(
+            function () {
+                $this->routes();
+            }
+        );
+    }
+
+
+    /**
+     * Register the tool's routes.
+     *
+     * @return void
+     */
+    protected function routes()
+    {
+        if ($this->app->routesAreCached()) {
+            return;
+        }
+
+        /**
+         * Finder Routes
+         */
+        $this->loadRoutesForRiCa(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'routes');
     }
 
     /**
@@ -72,13 +178,5 @@ class InformateProvider extends ServiceProvider
         $this->commands([]);
     }
 
-    private function setProviders()
-    {
-        (new Collection(self::$providers))->map(
-            function ($provider) {
-                $this->app->register($provider);
-            }
-        );
-    }
 
 }
