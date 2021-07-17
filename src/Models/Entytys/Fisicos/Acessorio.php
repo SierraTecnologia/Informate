@@ -16,6 +16,10 @@ class Acessorio extends Base
         'name',
     ];
 
+    public static $features = [
+        'espolio',
+    ];
+
     protected $mappingProperties = array(
         /**
          * User Info

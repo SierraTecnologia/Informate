@@ -20,8 +20,12 @@ trait Skillable
      */
     public function skills()
     {
-        return $this->morphToMany(Skill::class, 'skillable');
+        return $this->morphToMany(Skill::class, 'skillable')
+            ->withTimestamps()
+            ->withPivot('valor');
+            // ->orderBy('videoables.valor');
     }
+
     // /**
     //  *
     //  * @return mix
