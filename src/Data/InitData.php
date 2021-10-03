@@ -7,7 +7,7 @@ namespace Informate\Data;
 
 class InitData
 {
-    public function run()
+    public function run(): void
     {
         
         $model = \Informate\Models\Ciencia\Padroes\MedidaType::class;
@@ -18,12 +18,12 @@ class InitData
     }
 
 
-    private function loadClasses()
+    private function loadClasses(): void
     {
         
     }
 
-    private function loadFolders()
+    private function loadFolders(): void
     {
         
     }

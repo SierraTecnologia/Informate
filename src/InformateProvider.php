@@ -103,8 +103,10 @@ class InformateProvider extends ServiceProvider
 
     /**
      * Alias the services in the boot.
+     *
+     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         // $this->publishes([
         //     __DIR__.'/Publishes/resources/tools' => base_path('resources/tools'),
