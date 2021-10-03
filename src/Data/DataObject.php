@@ -18,7 +18,12 @@ class DataObject
         return $model::createIfNotExistAndReturn(static::$getData());
     }
 
-    public static function getData()
+    /**
+     * @return array
+     *
+     * @psalm-return array{code: mixed, name: mixed}
+     */
+    public static function getData(): array
     {
         return [
             'code' => static::$code,
