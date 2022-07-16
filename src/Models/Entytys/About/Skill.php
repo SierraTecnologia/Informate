@@ -59,14 +59,16 @@ class Skill extends Base
         //     'type' => 'textarea'
         // ],
         // ['name' => 'publish_on', 'label' => 'Publish Date', 'type' => 'date'],
-        // ['name' => 'category_id', 'label' => 'Category', 'type' => 'select', 'relationship' => 'category'],
+        ['name' => 'skill_code', 'label' => 'Parent', 'type' => 'select', 'relationship' => 'parent'],
         // ['name' => 'tags', 'label' => 'Tags', 'type' => 'select_multiple', 'relationship' => 'tags'],
     ];
 
     public $indexFields = [
+        'code',
         'name',
         'description',
-        'status'
+        'status',
+        'skill_code',
     ];
 
     public $validationRules = [
@@ -106,20 +108,29 @@ class Skill extends Base
         ],
     );
 
-    /**
-     * Get all of the persons that are assigned this tag.
-     */
-    public function persons()
-    {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
-    }
 
     /**
-     * Get all of the videos that are assigned this tag.
+     * Parent Skill
      */
-    public function videos()
+    public function parent()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.video', \MediaManager\Models\Video::class), 'skillable')
-            ->withPivot('valor');
+        return $this->belongsTo(Skill::class, 'skill_code', 'code');
     }
+    // @todo parente skill_code
+    // /**
+    //  * Get all of the persons that are assigned this tag.
+    //  */
+    // public function persons()
+    // {
+    //     return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
+    // }
+
+    // /**
+    //  * Get all of the videos that are assigned this tag.
+    //  */
+    // public function videos()
+    // {
+    //     return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.video', \MediaManager\Models\Video::class), 'skillable')
+    //         ->withPivot('valor');
+    // }
 }
