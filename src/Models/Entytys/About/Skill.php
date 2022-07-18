@@ -3,6 +3,7 @@
 namespace Informate\Models\Entytys\About;
 
 use Pedreiro\Models\Base;
+use Illuminate\Support\Str;
 
 class Skill extends Base
 {
@@ -108,6 +109,24 @@ class Skill extends Base
         ],
     );
 
+
+    /**
+     * Register events
+     *
+     * @return void
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(
+            function ($model) {
+                $model->code =  Str::kebab($model->code);
+                
+            }
+        );
+    }
+    
 
     /**
      * Parent Skill

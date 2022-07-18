@@ -3,6 +3,7 @@
 namespace Informate\Models\Entytys\About;
 
 use Pedreiro\Models\Base;
+use Illuminate\Support\Str;
 
 class Caracteristica extends Base
 {
@@ -119,6 +120,23 @@ class Caracteristica extends Base
             "analyzer" => "standard",
         ],
     );
+
+    /**
+     * Register events
+     *
+     * @return void
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(
+            function ($model) {
+                $model->code =  Str::kebab($model->code);
+                
+            }
+        );
+    }
     
     /**
      * Get all of the slaves that are assigned this tag.
