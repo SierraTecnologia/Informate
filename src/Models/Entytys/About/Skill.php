@@ -61,7 +61,7 @@ class Skill extends Base
         // ],
         // ['name' => 'publish_on', 'label' => 'Publish Date', 'type' => 'date'],
         ['name' => 'skill_code', 'label' => 'Parent', 'type' => 'select', 'relationship' => 'parent'],
-        // ['name' => 'tags', 'label' => 'Tags', 'type' => 'select_multiple', 'relationship' => 'tags'],
+        // ['name' => 'videos', 'label' => 'Videos', 'type' => 'select_multiple', 'relationship' => 'videos'],
     ];
 
     public $indexFields = [
@@ -144,12 +144,12 @@ class Skill extends Base
     //     return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
     // }
 
-    // /**
-    //  * Get all of the videos that are assigned this tag.
-    //  */
-    // public function videos()
-    // {
-    //     return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.video', \MediaManager\Models\Video::class), 'skillable')
-    //         ->withPivot('valor');
-    // }
+    /**
+     * Get all of the videos that are assigned this tag.
+     */
+    public function videos()
+    {
+        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.video', \MediaManager\Models\Video::class), 'skillable')
+            ->withPivot('valor');
+    }
 }
