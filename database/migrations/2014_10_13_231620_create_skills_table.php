@@ -41,6 +41,20 @@ class CreateSkillsTable extends Migration
                 $table->softDeletes();
             }
         );
+        // Precido com a de cima mas invez de marcar um valor puro, faz um historico compelto de todas as ações envolidas
+        Schema::create(
+            'skill_reports', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
+                $table->uuid('id')->primary();
+                $table->string('valor', 255)->nullable();
+                $table->string('skillable_id')->nullable();
+                $table->string('skillable_type', 255)->nullable();
+                $table->string('skill_code');
+                $table->foreign('skill_code')->references('code')->on('skills');
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
         /**
          * caracteristicas
          */
@@ -55,11 +69,12 @@ class CreateSkillsTable extends Migration
                 $table->string('consequencia', 255)->nullable();
                 $table->string('motivo', 255)->nullable();
                 $table->text('obs')->nullable();
-                $table->string('caracteristica_code')->nullable();
+                $table->string('caracteristica_code')->nullable(); // Pai
                 $table->timestamps();
                 $table->softDeletes();
             }
         );
+        // Aonde a caracteristica se aplica, e o valor
         Schema::create(
             'caracteristicables', function (Blueprint $table) {
                 $table->engine = 'InnoDB';

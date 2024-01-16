@@ -3,7 +3,7 @@
 
 if (\Muleta\Modules\Features\Resources\FeatureHelper::hasActiveFeature(
     [
-        'espolio',
+        'academy',
     ]
 )){
     Route::resource('/skills', 'SkillController')->parameters([

@@ -3,6 +3,7 @@
 namespace Informate\Models\Entytys\About;
 
 use Pedreiro\Models\Base;
+use Illuminate\Support\Str;
 
 class Skill extends Base
 {
@@ -59,14 +60,16 @@ class Skill extends Base
         //     'type' => 'textarea'
         // ],
         // ['name' => 'publish_on', 'label' => 'Publish Date', 'type' => 'date'],
-        // ['name' => 'category_id', 'label' => 'Category', 'type' => 'select', 'relationship' => 'category'],
-        // ['name' => 'tags', 'label' => 'Tags', 'type' => 'select_multiple', 'relationship' => 'tags'],
+        ['name' => 'skill_code', 'label' => 'Parent', 'type' => 'select', 'relationship' => 'parent'],
+        // ['name' => 'videos', 'label' => 'Videos', 'type' => 'select_multiple', 'relationship' => 'videos'],
     ];
 
     public $indexFields = [
+        'code',
         'name',
         'description',
-        'status'
+        'status',
+        'skill_code',
     ];
 
     public $validationRules = [
@@ -106,13 +109,40 @@ class Skill extends Base
         ],
     );
 
+
     /**
-     * Get all of the persons that are assigned this tag.
+     * Register events
+     *
+     * @return void
      */
-    public function persons()
+    public static function boot()
     {
-        return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
+        parent::boot();
+
+        static::creating(
+            function ($model) {
+                $model->code =  Str::kebab($model->code);
+                
+            }
+        );
     }
+    
+
+    /**
+     * Parent Skill
+     */
+    public function parent()
+    {
+        return $this->belongsTo(Skill::class, 'skill_code', 'code');
+    }
+    // @todo parente skill_code
+    // /**
+    //  * Get all of the persons that are assigned this tag.
+    //  */
+    // public function persons()
+    // {
+    //     return $this->morphedByMany(\Illuminate\Support\Facades\Config::get('sitec.core.models.person', \Telefonica\Models\Actors\Person::class), 'skillable');
+    // }
 
     /**
      * Get all of the videos that are assigned this tag.
