@@ -1,0 +1,24 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    level: 8
+    paths:
+        - src
+    excludePaths:
+        - src/Data/*
+    tmpDir: build/phpstan
+    checkOctaneCompatibility: false
+    checkModelProperties: true
+    checkMissingIterableValueType: false
+    ignoreErrors:
+        # Ignore dynamic config() calls
+        - '#Call to an undefined static method Illuminate\\Support\\Facades\\Config::get\(\)#'
+        # Ignore morph relationships with dynamic classes
+        - '#Parameter \#1 \$related of method .+ expects .+, string given#'
+        # Ignore dynamic model attributes
+        - '#Access to an undefined property .+::\$.+#'
+        # Ignore fillable/guarded dynamic properties
+        - '#Property .+::\$fillable .+ does not accept array#'
+        # Ignore pivot attributes
+        - '#Property .+::\$pivot .+ does not accept .+#'
