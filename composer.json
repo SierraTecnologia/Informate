@@ -9,8 +9,8 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
-        "spatie/laravel-sluggable": "^2.6",
+        "php": "^8.0|^8.1|^8.2",
+        "spatie/laravel-sluggable": "^2.6|^3.0",
         "sierratecnologia/muleta": "dev-master"
     },
     "autoload": {
@@ -19,6 +19,18 @@
         }
     },
     "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:coverage": "vendor/bin/phpunit --coverage-html coverage/",
+        "phpstan": "vendor/bin/phpstan analyse src/",
+        "phpcs": "vendor/bin/phpcs --standard=PSR12 src/",
+        "phpcbf": "vendor/bin/phpcbf --standard=PSR12 src/",
+        "phpmd": "vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode",
+        "check": [
+            "@phpcs",
+            "@phpstan",
+            "@phpmd",
+            "@test"
+        ],
         "post-install-cmd": [],
         "post-update-cmd": [],
         "post-create-project-cmd": []
@@ -37,6 +49,14 @@
         }
     },
     "require-dev": {
-        "psalm/plugin-laravel": "^1.5"
+        "phpunit/phpunit": "^9.5|^10.0",
+        "orchestra/testbench": "^7.0|^8.0",
+        "nunomaduro/larastan": "^2.0",
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpmd/phpmd": "^2.13",
+        "mockery/mockery": "^1.5",
+        "fakerphp/faker": "^1.21",
+        "psalm/plugin-laravel": "^1.5|^2.0"
     }
 }
